@@ -114,11 +114,6 @@ function App() {
       <div className="absolute bottom-4 right-6 text-xs text-gray-200">
         © Ceyfish Co. is a trademark of Union Harvest Inc, Canada.
       </div>
-      <img
-        src="/src/assets/Tuna_Fish.png"
-        alt="Large tuna fish swimming in clear blue water with a calm and optimistic atmosphere. The surrounding environment suggests an ocean setting. No visible text in the image."
-        className="flex-1 h-screen w-full object-cover"
-      />
     </div>
   );
 }
