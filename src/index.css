@@ -1,16 +1,6 @@
 @import "tailwindcss";
 
-/* Deep navy ocean-like gradient */
-/* .bg-ocean {
-  background: radial-gradient(
-    circle at top center,
-    #0a2342 0%,
-    #06172d 50%,
-    #030b1a 100% 
-  );
-  background-attachment: fixed;
-} */
-
-.bg-ocean {
-  background-color: #070f35;
+@theme {
+  --color-background: #071739;
+  --color-secondary: #ffff00;
 }
