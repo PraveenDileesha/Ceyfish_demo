@@ -17,7 +17,7 @@ const Loader = () => {
   const Icon = icons[index];
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-ocean">
+    <div className="flex flex-col items-center justify-center h-screen bg-[#070f35]">
       {/* Cycling Icons */}
       <div className="mt-6 text-500 transition-all duration-500 ease-in-out">
         <Icon className="size-28" style={{ color: "#f2e500" }} />

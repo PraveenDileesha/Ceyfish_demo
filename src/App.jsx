@@ -18,12 +18,25 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
 
+  const [showContent, setShowContent] = useState(false);
+
+  useEffect(() => {
+    if (!loading) {
+      // Delay to allow fade-in
+      setTimeout(() => setShowContent(true), 50);
+    }
+  }, [loading]);
+
   if (loading) {
     return <Loader />;
   }
 
   return (
-    <div className="relative flex min-h-screen bg-[#071739] text-white">
+    <div
+      className={`relative flex min-h-screen bg-[#070f35] text-white transition-opacity duration-[2000ms] ease-in-out ${
+        showContent ? "opacity-100" : "opacity-0"
+      }`}
+    >
       {/* logo */}
       <div className="absolute top-10 ml-5 w-1/12 inset-0">
         <img
