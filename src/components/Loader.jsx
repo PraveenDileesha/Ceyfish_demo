@@ -10,7 +10,7 @@ const Loader = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % icons.length);
-    }, 500); // change icon every 1s
+    }, 600); // change icon every 1s
     return () => clearInterval(interval);
   }, []);
 
@@ -19,8 +19,8 @@ const Loader = () => {
   return (
     <div className="flex flex-col items-center justify-center h-screen bg-ocean">
       {/* Cycling Icons */}
-      <div className="mt-6 text-cyan-500 transition-all duration-500 ease-in-out">
-        <Icon className="size-28" />
+      <div className="mt-6 text-500 transition-all duration-500 ease-in-out">
+        <Icon className="size-28" style={{ color: "#f2e500" }} />
       </div>
     </div>
   );
