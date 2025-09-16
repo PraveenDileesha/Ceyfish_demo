@@ -1,6 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Oswald:wght@200..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
 
 @theme {
   --color-background: #071739;
   --color-secondary: #ffff00;
+  --color-accent: #abedf6;
+
+  --color-deep-navy: #071739; /* Anchor background */
+  --color-bright-ocean-blue: #00b1f5; /* Primary accent / highlight */
+  --color-light-aqua: #c9eaff; /* Pale aqua for text / backgrounds */
+  --color-deep-teal: #0a2c4e; /* Secondary dark text */
+
+  --color-accent-red: #eb4545;
+
+  --color-dark-gray: #1a1a1a; /* Dark gray background */
+  --color-blue-gray: #1e2b3a;
+
+  --font-primary: "Oswald", sans-serif;
+  --font-secondary: "Kalam", cursive;
+  --font-body: "Montserrat", sans-serif;
+}
+
+/* ------------------------- Hide Scrollbar -------------------------------------------------- */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Chrome, Safari, Opera */
+body {
+  -ms-overflow-style: none;
+}
+
+/* IE & Edge */
+html {
+  scrollbar-width: none;
+}
+
+/* Firefox */
+/* ------------------------- Body -------------------------------------------------- */
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+li,
+ul,
+figure {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: initial;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+}
+
+/* Selection */
+::selection {
+  background-color: var(--color-accent-red);
+  color: var(--color-white);
+  text-shadow: none;
+}
+
+::-moz-selection {
+  background-color: var(--color-accent-red);
+  color: var(--color-white);
+  text-shadow: none;
+}
+
+@layer components {
+  .btn-hero {
+    @apply flex items-center space-x-2 cursor-pointer bg-blue-gray p-3 border-2 border-transparent rounded-md hover:border-bright-ocean-blue hover:scale-105 transition-transform;
+  }
+
+  .btn-hero-icon {
+    @apply text-bright-ocean-blue text-2xl mb-1;
+  }
+
+  .btn-hero-text {
+    @apply text-bright-ocean-blue uppercase font-secondary font-semibold text-xl;
+  }
+
+  .btn-hero:hover .btn-hero-icon,
+  .btn-hero:hover .btn-hero-text {
+    animation: wiggle-continuous 0.3s ease-in-out infinite;
+  }
+}
+
+@keyframes wiggle-continuous {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-1.25deg);
+  }
+  75% {
+    transform: rotate(1.25deg);
+  }
 }
