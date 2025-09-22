@@ -1,11 +1,39 @@
-import React from "react";
+import React, { useRef } from "react";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { IoPhonePortraitOutline } from "react-icons/io5";
 import { PiPaperPlaneTiltBold } from "react-icons/pi";
 import bg_secondary from "../assets/bg-secondary.png";
+import emailjs from "@emailjs/browser";
 
 const Contact = React.forwardRef((props, ref) => {
+  const formRef = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        import.meta.env.VITE_SERVICE_ID,
+        import.meta.env.VITE_TEMPLATE_ID,
+        formRef.current,
+        {
+          publicKey: import.meta.env.VITE_PUBLIC_KEY,
+        }
+      )
+      .then(
+        (result) => {
+          console.log("Email sent:", result.text);
+          alert("Your message has been sent!");
+          formRef.current.reset(); // clear form
+        },
+        (error) => {
+          console.error("Error sending email:", error.text);
+          alert("Failed to send message. Please try again.");
+        }
+      );
+  };
+
   return (
     <div
       ref={ref}
@@ -25,7 +53,11 @@ const Contact = React.forwardRef((props, ref) => {
         </p>
 
         <div className="flex items-center justify-center px-4">
-          <form className="w-full max-w-3xl space-y-8">
+          <form
+            className="w-full max-w-3xl space-y-8"
+            ref={formRef}
+            onSubmit={sendEmail}
+          >
             <div className="flex gap-4">
               <div className="flex items-center space-x-2 w-2/3">
                 <label className="text-lg font-medium whitespace-nowrap">
@@ -33,6 +65,7 @@ const Contact = React.forwardRef((props, ref) => {
                 </label>
                 <input
                   type="text"
+                  name="name"
                   placeholder="name*"
                   className="input-field"
                   required
@@ -45,6 +78,7 @@ const Contact = React.forwardRef((props, ref) => {
                 </label>
                 <input
                   type="text"
+                  name="role"
                   placeholder="role*"
                   className="input-field"
                   required
@@ -59,6 +93,7 @@ const Contact = React.forwardRef((props, ref) => {
                 </label>
                 <input
                   type="text"
+                  name="organisation"
                   placeholder="organisation*"
                   className="input-field"
                   required
@@ -71,6 +106,7 @@ const Contact = React.forwardRef((props, ref) => {
                 </label>
                 <input
                   type="text"
+                  name="location"
                   placeholder="location*"
                   className="input-field"
                   required
@@ -84,6 +120,7 @@ const Contact = React.forwardRef((props, ref) => {
               </label>
               <input
                 type="text"
+                name="objective"
                 placeholder="objective*"
                 className="input-field"
                 required
@@ -96,6 +133,7 @@ const Contact = React.forwardRef((props, ref) => {
               </label>
               <input
                 type="email"
+                name="email"
                 placeholder="email*"
                 className="input-field"
                 required
