@@ -2,15 +2,35 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
 
+@font-face {
+  font-family: "BebasNote";
+  src: url("./assets/fonts/BebasNoteLight-LVEDg.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 300;
+}
+@font-face {
+  font-family: "BebasNote";
+  src: url("./assets/fonts/BebasNoteRegular-drnL6.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "BebasNote";
+  src: url("./assets/fonts/BebasNoteBold-PV3Dg.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+}
+
 @theme {
   --color-background: #071739;
-  --color-secondary: #ffff00;
+  --color-secondary: #feff1b;
   --color-accent: #abedf6;
 
   --color-deep-navy: #071739; /* Anchor background */
   --color-bright-ocean-blue: #00b1f5; /* Primary accent / highlight */
   --color-light-aqua: #c9eaff; /* Pale aqua for text / backgrounds */
   --color-deep-teal: #0a2c4e; /* Secondary dark text */
+  --color-btn-dark: #01142a;
 
   --color-accent-red: #eb4545;
 
@@ -18,7 +38,8 @@
   --color-blue-gray: #1e2b3a;
 
   --font-primary: "Oswald", sans-serif;
-  --font-secondary: "Kalam", cursive;
+  --font-secondary: "BebasNote", sans-serif;
+  --font-accent: "Kalam", cursive;
   --font-body: "Montserrat", sans-serif;
 }
 
@@ -83,23 +104,31 @@ body {
   text-shadow: none;
 }
 
+.custom-font {
+  font-family: var(--font-primary);
+}
+
 @layer components {
   .btn-hero {
-    @apply flex items-center space-x-2 cursor-pointer bg-blue-gray p-3 border-2 border-transparent rounded-md hover:border-bright-ocean-blue hover:scale-105 transition-transform;
+    @apply flex items-center space-x-2 cursor-pointer  p-3 border-2 border-transparent rounded-md  hover:scale-105 transition-transform;
   }
 
   .btn-hero-icon {
-    @apply text-bright-ocean-blue text-2xl mb-1;
+    @apply text-2xl mb-1;
   }
 
   .btn-hero-text {
-    @apply text-bright-ocean-blue uppercase font-secondary font-semibold text-xl;
+    @apply uppercase font-secondary font-semibold text-xl;
   }
 
   .btn-hero:hover .btn-hero-icon,
   .btn-hero:hover .btn-hero-text {
     animation: wiggle-continuous 0.3s ease-in-out infinite;
   }
+}
+
+.input-field {
+  @apply bg-transparent border-b border-dashed border-[#666] w-full focus:outline-none;
 }
 
 @keyframes wiggle-continuous {

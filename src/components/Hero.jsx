@@ -1,86 +1,23 @@
-import { useEffect, useState } from "react";
-import { IoIosCall } from "react-icons/io";
 import { HiOutlineMail } from "react-icons/hi";
+import { IoIosCall } from "react-icons/io";
 import bg_primary from "../assets/bg-primary.png";
 import fish from "../assets/fish.png";
 import logo2 from "../assets/logos/brc.png";
 import logo4 from "../assets/logos/dolphin safe gg.png";
 import logo3 from "../assets/logos/fots.png";
 import logo1 from "../assets/logos/haccp.png";
-import Loader from "./Loader";
 import logo from "/logo.png";
 
-// helper
-const preloadImages = (srcArray) => {
-  const promises = srcArray.map(
-    (src) =>
-      new Promise((resolve, reject) => {
-        const img = new Image();
-        img.src = src;
-        img.onload = resolve;
-        img.onerror = reject;
-      })
-  );
-  return Promise.all(promises);
-};
-
-const Hero = () => {
-  const [loading, setLoading] = useState(true);
-  const [fadeOut, setFadeOut] = useState(false);
-
-  useEffect(() => {
-    let delayDone = false;
-    let imagesDone = false;
-
-    // minimum 3s delay
-    const delayTimer = setTimeout(() => {
-      delayDone = true;
-      if (imagesDone) setFadeOut(true);
-    }, 3000);
-
-    // preload images
-    preloadImages([fish, logo1, logo2, logo3, logo4, logo])
-      .then(() => {
-        imagesDone = true;
-        if (delayDone) setFadeOut(true);
-      })
-      .catch(() => {
-        imagesDone = true;
-        if (delayDone) setFadeOut(true);
-      });
-
-    return () => clearTimeout(delayTimer);
-  }, []);
-
-  // after fadeOut triggers, wait for transition then hide loader
-  useEffect(() => {
-    if (fadeOut) {
-      const timer = setTimeout(() => setLoading(false), 700); // match transition
-      return () => clearTimeout(timer);
-    }
-  }, [fadeOut]);
-
+const Hero = ({ onEmailClick }) => {
   return (
     <div
       className="relative min-h-screen text-white"
       style={{ backgroundImage: `url(${bg_primary})` }}
     >
-      {/* Loader (full screen overlay) */}
-      {loading && (
-        <div
-          className={`fixed inset-0 flex items-center justify-center transition-opacity duration-700 ${
-            fadeOut ? "opacity-0" : "opacity-100"
-          }`}
-        >
-          <Loader />
-        </div>
-      )}
-
       {/* Main site content with fade-in */}
       <div
-        className={`flex min-h-screen relative transition-opacity duration-1000 ${
-          loading ? "opacity-0" : "opacity-100"
-        }`}
+        className="flex min-h-screen relative transition-opacity duration-1000 ${
+        "
       >
         {/* Left Section (Text) */}
         <div className="flex flex-col justify-center px-16 w-2/3">
@@ -91,10 +28,10 @@ const Hero = () => {
           </div>
 
           <div className="border-l-4 border-secondary pl-4">
-            <h1 className="text-6xl font-medium leading-tight font-primary">
+            <h1 className="text-6xl font-bold leading-tight font-primary">
               OUR NEXT <span className="text-secondary">EXPEDITION</span>
             </h1>
-            <h1 className="text-5xl font-medium whitespace-nowrap font-primary uppercase">
+            <h1 className="text-5xl font-bold whitespace-nowrap font-primary uppercase">
               Brings a{" "}
               <span className="text-bright-ocean-blue">New Website</span> Ashore
             </h1>
@@ -110,25 +47,34 @@ const Hero = () => {
           {/* Contact Section */}
           <div className="mt-16 ml-14 font-secondary -rotate-4 uppercase">
             <p className="text-bright-ocean-blue font-semibold text-3xl leading-0">
-              Questions or orders<span className="text-5xl leading-0">?</span>
+              Questions or orders
+              <span className="text-5xl leading-0 font-accent">?</span>
             </p>
-            <p className="text-2xl">
-              Get in touch with us today<span className="text-6xl">!</span>
+            <p className="text-2xl tracking-wider">
+              Get in touch with us today
+              <span className="text-6xl font-accent">!</span>
             </p>
           </div>
 
           <div className="flex space-x-8 mt-24 ml-5 font-body">
-            <div className="btn-hero">
+            <div className="btn-hero bg-secondary hover:border-btn-dark">
               <span>
-                <IoIosCall className="btn-hero-icon" />
+                <IoIosCall className="btn-hero-icon text-deep-navy" />
               </span>
-              <p className="btn-hero-text">Call Our Team</p>
+              <p className="btn-hero-text text-deep-navy tracking-wide">
+                Call Our Team
+              </p>
             </div>
-            <button className="btn-hero">
+            <button
+              className="btn-hero bg-secondary hover:border-btn-dark"
+              onClick={onEmailClick}
+            >
               <span>
-                <HiOutlineMail className="btn-hero-icon" />
+                <HiOutlineMail className="btn-hero-icon text-deep-navy" />
               </span>
-              <p className="btn-hero-text">Send an Email</p>
+              <p className="btn-hero-text text-deep-navy tracking-wide">
+                Send an Email
+              </p>
             </button>
           </div>
         </div>
