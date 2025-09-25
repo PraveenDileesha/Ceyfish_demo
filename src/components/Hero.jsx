@@ -64,7 +64,7 @@ const Hero = () => {
         </div>
 
         {/* Right Section (Logos + Legal Text) */}
-        <div className="flex flex-col w-full lg:w-1/3 justify-center items-center sm:px-10 mt-10 lg:mt-0">
+        <div className="flex flex-col w-full lg:w-1/2 justify-center items-center sm:px-10 mt-10 lg:mt-0">
           <div className="flex flex-wrap items-center justify-center gap-3">
             <img
               src={logo1}
@@ -106,7 +106,7 @@ const Hero = () => {
           <img
             src={fish}
             alt="fish"
-            className="object-contain md:h-72 lg:h-screen ml-[13%]"
+            className="object-contain md:h-72 lg:h-screen ml-[14%]"
           />
         </div>
       </main>
