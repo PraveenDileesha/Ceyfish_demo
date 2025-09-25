@@ -7,6 +7,7 @@ import logo4 from "../assets/logos/dolphin safe gg.png";
 import logo3 from "../assets/logos/fots.png";
 import logo1 from "../assets/logos/haccp.png";
 import logo from "/logo.png";
+import EmailButton from "./EmailButton";
 
 const Hero = () => {
   return (
@@ -19,7 +20,6 @@ const Hero = () => {
         {/* Left Section (Text) */}
         <div className="flex flex-col justify-center px-6 sm:px-10 md:px-16 w-full lg:w-2/3">
           <div className="mb-12">
-            {/* Adjust spacing as needed */}
             <img src={logo} alt="fish" className="object-contain w-28" />
           </div>
 
@@ -53,7 +53,7 @@ const Hero = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row sm:space-x-8 mt-10 sm:mt-16 lg:mt-24 ml-0 sm:ml-5 font-body gap-6 sm:gap-0">
-            <div className="btn-hero bg-secondary hover:border-btn-dark">
+            <div className="btn-hero bg-secondary hover:border-btn-dark flex items-center">
               <span>
                 <IoIosCall className="btn-hero-icon text-deep-navy" />
               </span>
@@ -61,14 +61,9 @@ const Hero = () => {
                 Call Our Team
               </p>
             </div>
-            <button className="btn-hero bg-secondary hover:border-btn-dark">
-              <span>
-                <HiOutlineMail className="btn-hero-icon text-deep-navy" />
-              </span>
-              <p className="btn-hero-text text-deep-navy tracking-wide">
-                Send an Email
-              </p>
-            </button>
+
+            {/* Email Button with Dropdown */}
+            <EmailButton />
           </div>
         </div>
 
