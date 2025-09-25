@@ -7,6 +7,7 @@ import logo4 from "../assets/logos/dolphin safe gg.png";
 import logo3 from "../assets/logos/fots.png";
 import logo1 from "../assets/logos/haccp.png";
 import logo from "/logo.png";
+import EmailButton from "./EmailButton";
 
 const Hero = () => {
   return (
@@ -15,13 +16,10 @@ const Hero = () => {
       style={{ backgroundImage: `url(${bg_primary})` }}
     >
       {/* Main site content with fade-in */}
-      <div
-        className="flex min-h-screen relative"
-      >
+      <div className="flex min-h-screen relative">
         {/* Left Section (Text) */}
         <div className="flex flex-col justify-center px-16 w-2/3">
           <div className="mb-12">
-            {/* Adjust spacing as needed */}
             <img src={logo} alt="fish" className="object-contain w-28" />
           </div>
 
@@ -55,7 +53,8 @@ const Hero = () => {
           </div>
 
           <div className="flex space-x-8 mt-24 ml-5 font-body">
-            <div className="btn-hero bg-secondary hover:border-btn-dark">
+            {/* Call Button */}
+            <div className="btn-hero bg-secondary hover:border-btn-dark flex items-center">
               <span>
                 <IoIosCall className="btn-hero-icon text-deep-navy" />
               </span>
@@ -63,14 +62,9 @@ const Hero = () => {
                 Call Our Team
               </p>
             </div>
-            <button className="btn-hero bg-secondary hover:border-btn-dark">
-              <span>
-                <HiOutlineMail className="btn-hero-icon text-deep-navy" />
-              </span>
-              <p className="btn-hero-text text-deep-navy tracking-wide">
-                Send an Email
-              </p>
-            </button>
+
+            {/* Email Button with Dropdown */}
+            <EmailButton />
           </div>
         </div>
 
