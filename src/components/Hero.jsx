@@ -16,8 +16,7 @@ const Hero = () => {
     >
       {/* Main site content with fade-in */}
       <div
-        className="flex min-h-screen relative transition-opacity duration-1000 ${
-        "
+        className="flex min-h-screen relative"
       >
         {/* Left Section (Text) */}
         <div className="flex flex-col justify-center px-16 w-2/3">
