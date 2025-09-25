@@ -8,7 +8,7 @@ import logo3 from "../assets/logos/fots.png";
 import logo1 from "../assets/logos/haccp.png";
 import logo from "/logo.png";
 
-const Hero = ({ onEmailClick }) => {
+const Hero = () => {
   return (
     <div
       className="relative min-h-screen text-white"
@@ -65,10 +65,7 @@ const Hero = ({ onEmailClick }) => {
                 Call Our Team
               </p>
             </div>
-            <button
-              className="btn-hero bg-secondary hover:border-btn-dark"
-              onClick={onEmailClick}
-            >
+            <button className="btn-hero bg-secondary hover:border-btn-dark">
               <span>
                 <HiOutlineMail className="btn-hero-icon text-deep-navy" />
               </span>
