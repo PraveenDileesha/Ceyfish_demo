@@ -5,8 +5,8 @@ import logo4 from "../assets/logos/dolphin safe gg.png";
 import logo3 from "../assets/logos/fots.png";
 import logo1 from "../assets/logos/haccp.png";
 import footerLogo from "../assets/logos/UH.png";
-import EmailButton from "./EmailButton";
 import logo from "/logo.png";
+import { HiOutlineMail } from "react-icons/hi";
 
 const Hero = () => {
   return (
@@ -44,18 +44,22 @@ const Hero = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row sm:space-x-8 mt-10 sm:mt-16 lg:mt-24 ml-0 sm:ml-5 font-body gap-6 sm:gap-0">
-            <div className="btn-hero bg-secondary hover:border-btn-dark flex items-center justify-center">
-              <a
-                href="tel:+94752686699"
-                className="btn-hero bg-secondary hover:border-btn-dark flex items-center"
-              >
-                <IoIosCall className="btn-hero-icon text-deep-navy" />
-                <p className="btn-hero-text text-deep-navy">Call Us</p>
-              </a>
-            </div>
-
-            {/* Email Button with Dropdown */}
-            <EmailButton />
+            <a
+              href="tel:+94752686699"
+              className="btn-hero w-52 justify-center bg-secondary hover:border-btn-dark"
+            >
+              <IoIosCall className="btn-hero-icon text-deep-navy" />
+              <p className="btn-hero-text text-deep-navy">Call Us</p>
+            </a>
+            <a
+              href="mailto:info@ceyfish.com?subject=Inquiry&body=Hello%20CeyFish%20Team,"
+              className="btn-hero w-52 justify-center bg-secondary hover:border-btn-dark"
+            >
+              <span>
+                <HiOutlineMail className="btn-hero-icon text-deep-navy" />
+              </span>
+              <p className="btn-hero-text text-deep-navy">Send an Email</p>
+            </a>
           </div>
         </div>
 
