@@ -22,7 +22,6 @@ const Hero = () => {
         {/* Left Section (Text) */}
         <div className="flex flex-col justify-center px-16 w-2/3">
           <div className="mb-12">
-            {" "}
             {/* Adjust spacing as needed */}
             <img src={logo} alt="fish" className="object-contain w-28" />
           </div>

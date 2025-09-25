@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { FaFish } from "react-icons/fa6";
 import bg_secondary from "../assets/bg-secondary.png";
+import logo from "/logo.ico";
 
 const Loader = ({ onFinish }) => {
   const [animationPhase, setAnimationPhase] = useState("initial");
@@ -39,9 +40,16 @@ const Loader = ({ onFinish }) => {
       className="flex items-center justify-center h-screen w-full bg-black"
       style={{ backgroundImage: `url(${bg_secondary})` }}
     >
-      <FaFish
+      <div className="mb-12">
+        <img
+          src={logo}
+          alt="fish"
+          className={`object-contain w-60 transition-transform duration-[1000ms] text-[12rem] ease-in-out ${getTransform()}`}
+        />
+      </div>
+      {/* <FaFish
         className={`text-white transition-transform duration-[1000ms] text-[12rem] ease-in-out ${getTransform()}`}
-      />
+      /> */}
     </div>
   );
 };

@@ -16,7 +16,7 @@ const App = () => {
       {/* Full-page loader */}
       {loading && (
         <div
-          className={`fixed inset-0 bg-black z-50 flex items-center justify-center transition-opacity duration-700 ${
+          className={`fixed inset-0 bg-black z-50 flex items-center justify-center transition-opacity duration-100 ${
             fadeOut ? "opacity-0" : "opacity-100"
           }`}
         >
