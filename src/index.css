@@ -111,7 +111,7 @@ body {
   }
 
   .btn-hero-text {
-    @apply uppercase font-secondary font-semibold text-xl;
+    @apply uppercase font-semibold;
   }
 
   .btn-hero:hover .btn-hero-icon,

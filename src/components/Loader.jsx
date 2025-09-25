@@ -1,4 +1,4 @@
-import bg_secondary from "../assets/bg-secondary.png";
+// import bg_secondary from "../assets/bg-secondary.png";
 import { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { FaFish } from "react-icons/fa";
@@ -27,13 +27,7 @@ const Loader = ({ onFinish }) => {
   }, [controls, onFinish]);
 
   return (
-    <div
-      className="flex items-center justify-center h-screen w-full bg-black"
-      style={{
-        backgroundImage: `url(${bg_secondary})`,
-        backgroundSize: "cover",
-      }}
-    >
+    <div className="flex items-center justify-center h-screen w-full bg-black bg-cover bg-[url('/bg-secondary.png')]">
       <motion.div
         className="flex items-center justify-center w-full h-full"
         animate={controls}
