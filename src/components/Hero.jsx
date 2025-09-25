@@ -54,12 +54,15 @@ const Hero = () => {
 
           <div className="flex flex-col sm:flex-row sm:space-x-8 mt-10 sm:mt-16 lg:mt-24 ml-0 sm:ml-5 font-body gap-6 sm:gap-0">
             <div className="btn-hero bg-secondary hover:border-btn-dark flex items-center">
-              <span>
+              <a
+                href="tel:+94752686699"
+                className="btn-hero bg-secondary hover:border-btn-dark flex items-center"
+              >
                 <IoIosCall className="btn-hero-icon text-deep-navy" />
-              </span>
-              <p className="btn-hero-text text-deep-navy tracking-wide">
-                Call Our Team
-              </p>
+                <p className="btn-hero-text text-deep-navy tracking-wide">
+                  Call Us
+                </p>
+              </a>
             </div>
 
             {/* Email Button with Dropdown */}
