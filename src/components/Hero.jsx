@@ -50,9 +50,7 @@ const Hero = () => {
                 className="btn-hero bg-secondary hover:border-btn-dark flex items-center"
               >
                 <IoIosCall className="btn-hero-icon text-deep-navy" />
-                <p className="btn-hero-text text-deep-navy tracking-wide">
-                  Call Us
-                </p>
+                <p className="btn-hero-text text-deep-navy">Call Us</p>
               </a>
             </div>
 
