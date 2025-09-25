@@ -15,21 +15,19 @@ const Hero = () => {
       style={{ backgroundImage: `url(${bg_primary})` }}
     >
       {/* Main site content with fade-in */}
-      <div
-        className="flex min-h-screen relative"
-      >
+      <div className="flex flex-col lg:flex-row min-h-screen relative">
         {/* Left Section (Text) */}
-        <div className="flex flex-col justify-center px-16 w-2/3">
+        <div className="flex flex-col justify-center px-6 sm:px-10 md:px-16 w-full lg:w-2/3">
           <div className="mb-12">
             {/* Adjust spacing as needed */}
             <img src={logo} alt="fish" className="object-contain w-28" />
           </div>
 
           <div className="border-l-4 border-secondary pl-4">
-            <h1 className="text-6xl font-bold leading-tight font-primary">
-              OUR NEXT <span className="text-secondary">EXPEDITION</span>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight font-primary uppercase">
+              Our Next <span className="text-secondary">Expedition</span>
             </h1>
-            <h1 className="text-5xl font-bold whitespace-nowrap font-primary uppercase">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold whitespace-nowrap font-primary uppercase">
               Brings a{" "}
               <span className="text-bright-ocean-blue">New Website</span> Ashore
             </h1>
@@ -54,7 +52,7 @@ const Hero = () => {
             </p>
           </div>
 
-          <div className="flex space-x-8 mt-24 ml-5 font-body">
+          <div className="flex flex-col sm:flex-row sm:space-x-8 mt-10 sm:mt-16 lg:mt-24 ml-0 sm:ml-5 font-body gap-6 sm:gap-0">
             <div className="btn-hero bg-secondary hover:border-btn-dark">
               <span>
                 <IoIosCall className="btn-hero-icon text-deep-navy" />
@@ -75,12 +73,28 @@ const Hero = () => {
         </div>
 
         {/* Right Section (Logos + Legal Text) */}
-        <div className="flex flex-col w-1/3 justify-center items-center px-10 ml-auto">
-          <div className="flex items-center justify-center space-x-6">
-            <img src={logo1} alt="logo1" className="h-16 object-contain" />
-            <img src={logo2} alt="logo2" className="h-16 object-contain" />
-            <img src={logo3} alt="logo3" className="h-16 object-contain" />
-            <img src={logo4} alt="logo4" className="h-16 object-contain" />
+        <div className="flex flex-col w-full lg:w-1/3 justify-center items-center px-6 sm:px-10 mt-10 lg:mt-0">
+          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
+            <img
+              src={logo1}
+              alt="logo1"
+              className="h-12 sm:h-14 md:h-16 object-contain"
+            />
+            <img
+              src={logo2}
+              alt="logo2"
+              className="h-12 sm:h-14 md:h-16 object-contain"
+            />
+            <img
+              src={logo3}
+              alt="logo3"
+              className="h-12 sm:h-14 md:h-16 object-contain"
+            />
+            <img
+              src={logo4}
+              alt="logo4"
+              className="h-12 sm:h-14 md:h-16 object-contain"
+            />
           </div>
 
           <div className="border-t border-secondary w-11/12 my-6"></div>
@@ -97,12 +111,16 @@ const Hero = () => {
         </div>
 
         {/* Middle Fish */}
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none">
-          <img src={fish} alt="fish" className="object-contain ml-[25%]" />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none hidden lg:block">
+          <img
+            src={fish}
+            alt="fish"
+            className="object-contain h-40 sm:h-60 md:h-72 lg:h-screen ml-[13%]"
+          />
         </div>
 
         {/* Copyright */}
-        <div className="absolute bottom-4 right-6 text-xs">
+        <div className="absolute bottom-2 right-2 text-[10px] sm:text-xs text-center px-2">
           © Ceyfish Co. is a trademark of Union Harvest Inc, Canada.
         </div>
       </div>
