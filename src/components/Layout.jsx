@@ -14,7 +14,7 @@ export default function Layout() {
       {/* Background layer */}
       <div className="absolute inset-0 -z-20 w-full h-full min-h-screen bg-[url('/bg-primary.png')] bg-cover bg-center"></div>
 
-      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent md:from-black/40" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent md:from-black/10" />
 
       {/* Fish layer */}
       <img
