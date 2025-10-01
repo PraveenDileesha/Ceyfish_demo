@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Hero from "./components/Hero";
 import Loader from "./components/Loader";
+import Layout from "./components/Layout";
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -30,7 +31,8 @@ const App = () => {
           fadeOut ? "opacity-100" : "opacity-0"
         }`}
       >
-        <Hero />
+        {/* <Hero /> */}
+        <Layout />
       </div>
     </div>
   );
