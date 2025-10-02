@@ -12,9 +12,9 @@ export default function Layout() {
   return (
     <div className="relative min-h-screen w-full flex flex-col">
       {/* Background layer */}
-      <div className="absolute inset-0 -z-20 w-full h-full min-h-screen bg-[url('/bg-primary.png')] bg-cover bg-center"></div>
+      <div className="fixed inset-0 -z-20 w-full h-full min-h-screen bg-[url('/bg-primary.png')] bg-cover bg-center" />
 
-      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent md:from-black/10" />
+      <div className="fixed inset-0 bg-gradient-to-t from-black/90 via-black/70 to-transparent md:from-black/10" />
 
       {/* Fish layer */}
       <img
@@ -30,9 +30,9 @@ export default function Layout() {
       </header>
 
       {/* Body */}
-      <main className="flex-1 px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 relative z-10 items-center">
+      <main className="flex-1 px-4 grid lg:grid-cols-3 gap-4 relative z-10 items-center">
         {/* Left Section */}
-        <div className="text-white relative z-20">
+        <div className="text-white relative z-20 lg:col-span-2">
           <div className="border-l-4 border-secondary pl-4">
             <h1 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight font-primary uppercase">
               Our Next <span className="text-secondary">Expedition</span>
@@ -51,14 +51,14 @@ export default function Layout() {
           </div>
 
           {/* Contact Section */}
-          <div className="mt-10 md:ml-14 font-body uppercase font-semibold">
+          <div className="mt-10 text-center md:text-start md:ml-14 font-body uppercase font-semibold">
             <p className="text-bright-ocean-blue text-xs md:text-2xl">
               Questions or orders ?
             </p>
             <p className="text-xs md:text-2xl">Get in touch with us today !</p>
           </div>
 
-          <div className="flex justify-center sm:space-x-8 mt-10 sm:mt-16 lg:mt-24 ml-0 sm:ml-5 font-body gap-6 sm:gap-0">
+          <div className="flex justify-center md:justify-start md:ml-14 sm:space-x-8 mt-10 sm:mt-16 lg:mt-24 ml-0 sm:ml-5 font-body gap-6 sm:gap-0">
             <a
               href="tel:+94722904343"
               className="btn-hero w-28 md:w-52 justify-center bg-secondary hover:border-btn-dark text-[10px] md:text-sm"
@@ -79,11 +79,12 @@ export default function Layout() {
             </a>
           </div>
         </div>
+
         {/* Middle Section */}
-        <div />
+        {/* <div /> */}
 
         {/* Right Section */}
-        <div className="text-white flex flex-col items-center">
+        <div className="text-white flex flex-col lg:col-span-1">
           <div className="flex flex-wrap items-center justify-center gap-3">
             <img
               src={logo1}
