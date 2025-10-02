@@ -27,7 +27,7 @@ const Loader = ({ onFinish }) => {
   }, [controls, onFinish]);
 
   return (
-    <div className="flex items-center justify-center h-screen w-full bg-light-aqua bg-cover bg-[url('/bg-secondary.png')]">
+    <div className="flex items-center justify-center h-screen w-full bg-accent bg-cover bg-[url('/bg-secondary.png')]">
       <motion.div
         className="flex items-center justify-center w-full h-full"
         animate={controls}
