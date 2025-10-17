@@ -4,10 +4,8 @@ import Loader from "./components/Loader";
 
 const App = () => {
   const [loading, setLoading] = useState(true);
-  const [fadeOut, setFadeOut] = useState(false);
 
   const handleLoaderFinish = () => {
-    setFadeOut(true); // start fading loader
     setTimeout(() => setLoading(false), 300); // remove loader after fade
   };
 
