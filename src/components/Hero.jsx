@@ -26,7 +26,7 @@ export default function Hero() {
       />
 
       {/* Header */}
-      <header className="fixed top-0 text-white p-4 text-center text-xl font-bold">
+      <header className="text-white p-4 text-center text-xl font-bold">
         <img src={logo} alt="fish" className="object-contain w-15 md:w-20" />
       </header>
 
