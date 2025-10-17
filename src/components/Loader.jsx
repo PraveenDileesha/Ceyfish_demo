@@ -35,7 +35,7 @@ const Loader = ({ onFinish }) => {
         initial={{ scale: 1 }}
       >
         <motion.img
-          src="/logo.png"
+          src="/logo.svg"
           alt="logo"
           className="w-[12rem] h-[12rem]"
         />
