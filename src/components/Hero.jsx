@@ -31,7 +31,7 @@ export default function Hero() {
       </header>
 
       {/* Body */}
-      <main className="flex flex-col lg:flex-row items-center justify-between w-full max-w-[1400px] mx-auto px-4 gap-10 relative z-10">
+      <main className="flex flex-col lg:flex-row items-center justify-between w-full mx-auto px-4 gap-10 relative z-10">
         {/* Left Section */}
         <div className="text-white lg:w-2/3">
           <div className="border-l-4 border-secondary pl-4">
@@ -53,10 +53,10 @@ export default function Hero() {
 
           {/* Contact Section */}
           <div className="mt-10 text-center lg:text-start md:ml-14 font-body uppercase font-semibold">
-            <p className="text-bright-ocean-blue text-xs md:text-xl lg:text-2xl">
+            <p className="text-bright-ocean-blue text-xs md:text-lg lg:text-2xl">
               Questions or orders ?
             </p>
-            <p className="text-xs md:text-xl lg:text-2xl">
+            <p className="text-xs md:text-lg lg:text-2xl">
               Get in touch with us today !
             </p>
           </div>
@@ -67,17 +67,19 @@ export default function Hero() {
               href="tel:+94722904343"
               className="btn-hero w-28 md:w-36 lg:w-52 justify-center bg-secondary hover:border-btn-dark text-[10px]"
             >
-              <IoIosCall className="text-base md:text-2xl mb-1 text-deep-navy" />
-              <p className="btn-hero-text text-deep-navy md:text-sm">Call Us</p>
+              <IoIosCall className="text-base md:text-xl lg:text-2xl mb-1 text-deep-navy" />
+              <p className="btn-hero-text text-deep-navy md:text-xs lg:text-sm">
+                Call Us
+              </p>
             </a>
             <a
               href="mailto:contact@ceyfish.com?subject=Inquiry&body=Hello%20CeyFish%20Team,"
               className="btn-hero w-28 md:w-36 lg:w-52 justify-center bg-secondary hover:border-btn-dark text-[10px]"
             >
               <span>
-                <HiOutlineMail className="text-base md:text-2xl mb-1 text-deep-navy" />
+                <HiOutlineMail className="text-base md:text-xl lg:text-2xl mb-1 text-deep-navy" />
               </span>
-              <p className="btn-hero-text text-deep-navy md:text-sm whitespace-nowrap">
+              <p className="btn-hero-text text-deep-navy md:text-xs lg:text-sm whitespace-nowrap">
                 Send Email
               </p>
             </a>
@@ -92,14 +94,14 @@ export default function Hero() {
                 key={i}
                 src={src}
                 alt={`logo${i + 1}`}
-                className="h-8 sm:h-12 md:h-14 lg:h-16 object-contain"
+                className="h-8 sm:h-10 md:h-12 lg:h-16 object-contain"
               />
             ))}
           </div>
 
           <div className="border-t border-secondary w-full md:w-11/12 my-6"></div>
 
-          <div className="text-[8px] md:text-sm space-y-2 md:space-y-4 text-center font-body font-medium px-4">
+          <div className="text-[8px] md:text-xs lg:text-sm space-y-2 md:space-y-4 text-center font-body font-medium px-4">
             <p>Licensed under the Safe Food for Canadians Regulations</p>
             <p>Registered with the U.S. Food and Drug Administration</p>
             <p>Approved for exports to the European Union</p>
