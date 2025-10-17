@@ -62,25 +62,22 @@ export default function Hero() {
           </div>
 
           {/* Contact Buttons */}
-          <div className="flex justify-center lg:justify-start md:ml-14 sm:space-x-8 mt-6 lg:mt-24 ml-0 sm:ml-5 font-body gap-6 sm:gap-0">
-            <a
-              href="tel:+14378789393"
-              className="btn-hero w-24 md:w-32 justify-center bg-secondary hover:border-btn-dark text-[10px] pr-4"
-            >
-              <IoIosCall className="text-base md:text-xl lg:text-2xl mb-1 text-deep-navy" />
-              <p className="btn-hero-text text-deep-navy md:text-xs lg:text-sm">
+          <div className="flex justify-center lg:justify-start gap-2 sm:gap-4 mt-6 lg:mt-24 md:ml-14 font-body">
+            <a href="tel:+14378789393"
+              aria-label="Call us at +1 437 878 9393"
+              className="btn-hero w-22 md:w-36 flex-row items-center justify-start bg-secondary hover:border-btn-dark">
+              <IoIosCall className="btn-hero-icon w-5 h-5 md:w-6 md:h-6 shrink-0 text-deep-navy" />
+              <p className="btn-hero-text text-deep-navy text-[10px] md:text-xs lg:text-sm ml-2 whitespace-nowrap">
                 Call Us
               </p>
             </a>
             <a
-              href="mailto:contact@ceyfish.com?subject=Inquiry&body=Hello%20CeyFish%20Team,"
-              className="btn-hero w-28 md:w-36 justify-center bg-secondary hover:border-btn-dark text-[10px]"
-            >
-              <span>
-                <HiOutlineMail className="text-base md:text-xl lg:text-2xl mb-1 text-deep-navy" />
-              </span>
-              <p className="btn-hero-text text-deep-navy md:text-xs lg:text-sm whitespace-nowrap">
-                Send Email
+              href="mailto:contact@ceyfish.com"
+              aria-label="Send email to contact@ceyfish.com"
+              className="btn-hero w-23 md:w-36 flex-row items-center justify-start bg-secondary hover:border-btn-dark">
+              <HiOutlineMail className="btn-hero-icon w-5 h-5 md:w-6 md:h-6 shrink-0 text-deep-navy" />
+              <p className="btn-hero-text text-deep-navy text-[10px] md:text-xs lg:text-sm ml-2 whitespace-nowrap">
+                Email Us
               </p>
             </a>
           </div>

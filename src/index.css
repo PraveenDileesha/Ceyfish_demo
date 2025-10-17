@@ -103,7 +103,7 @@ body {
 
 @layer components {
   .btn-hero {
-    @apply flex items-center space-x-2 cursor-pointer p-1 md:p-3 border-2 border-transparent rounded-md hover:scale-105 transition-transform;
+    @apply flex items-center cursor-pointer md:p-3 border-2 border-transparent rounded-md hover:scale-105 transition-transform;
   }
 
   .btn-hero-text {
