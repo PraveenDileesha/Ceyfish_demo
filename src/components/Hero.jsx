@@ -5,7 +5,7 @@ import logo4 from "/assets/logos/dolphin safe gg.png";
 import logo3 from "/assets/logos/fots.png";
 import logo1 from "/assets/logos/haccp.png";
 import footerLogo from "/assets/logos/UH.png";
-import logo from "/logo.png";
+import logo from "/logo-full.png";
 import { HiOutlineMail } from "react-icons/hi";
 
 export default function Hero() {
@@ -64,8 +64,8 @@ export default function Hero() {
           {/* Contact Buttons */}
           <div className="flex justify-center lg:justify-start md:ml-14 sm:space-x-8 mt-6 lg:mt-24 ml-0 sm:ml-5 font-body gap-6 sm:gap-0">
             <a
-              href="tel:+94722904343"
-              className="btn-hero w-28 md:w-36 lg:w-52 justify-center bg-secondary hover:border-btn-dark text-[10px]"
+              href="tel:+14378789393"
+              className="btn-hero w-28 md:w-36 justify-center bg-secondary hover:border-btn-dark text-[10px]"
             >
               <IoIosCall className="text-base md:text-xl lg:text-2xl mb-1 text-deep-navy" />
               <p className="btn-hero-text text-deep-navy md:text-xs lg:text-sm">
@@ -74,7 +74,7 @@ export default function Hero() {
             </a>
             <a
               href="mailto:contact@ceyfish.com?subject=Inquiry&body=Hello%20CeyFish%20Team,"
-              className="btn-hero w-28 md:w-36 lg:w-52 justify-center bg-secondary hover:border-btn-dark text-[10px]"
+              className="btn-hero w-28 md:w-36 justify-center bg-secondary hover:border-btn-dark text-[10px]"
             >
               <span>
                 <HiOutlineMail className="text-base md:text-xl lg:text-2xl mb-1 text-deep-navy" />
@@ -99,7 +99,7 @@ export default function Hero() {
             ))}
           </div>
 
-          <div className="border-t border-secondary w-full md:w-11/12 my-6"></div>
+          <div className="border-t border-secondary w-full md:w-10/12 my-6"></div>
 
           <div className="text-[8px] md:text-xs lg:text-sm space-y-2 md:space-y-4 text-center font-body font-medium px-4">
             <p>Licensed under the Safe Food for Canadians Regulations</p>

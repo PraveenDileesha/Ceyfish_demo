@@ -8,7 +8,7 @@ const App = () => {
 
   const handleLoaderFinish = () => {
     setFadeOut(true); // start fading loader
-    setTimeout(() => setLoading(false), 500); // remove loader after fade
+    setTimeout(() => setLoading(false), 300); // remove loader after fade
   };
 
   return (
@@ -16,20 +16,14 @@ const App = () => {
       {/* Full-page loader */}
       {loading && (
         <div
-          className={`fixed inset-0 bg-white z-50 flex items-center justify-center transition-opacity duration-700 ${
-            fadeOut ? "opacity-0" : "opacity-100"
-          }`}
+          className={`fixed inset-0 bg-[url('/bg-primary.png')] z-50 flex items-center justify-center transition-opacity duration-700`}
         >
           <Loader onFinish={handleLoaderFinish} />
         </div>
       )}
 
       {/* Page content (hidden behind loader initially) */}
-      <div
-        className={`transition-opacity duration-500 h-screen ${
-          fadeOut ? "opacity-100" : "opacity-0"
-        }`}
-      >
+      <div className={`transition-opacity duration-500 h-screen`}>
         <Hero />
       </div>
     </div>

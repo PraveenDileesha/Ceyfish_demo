@@ -16,23 +16,29 @@ const Loader = ({ onFinish }) => {
       // Step 2: Zoom in large with spring
       await controls.start({
         scale: 50, // covers the screen nicely
-        transition: { duration: 0.6, ease: "easeIn" },
+        opacity: 0,
+        transition: { duration: 1, ease: "easeIn" },
       });
 
-      onFinish();
+      controls.set({ scale: 70, opacity: 0 });
+      setTimeout(() => onFinish(), 100);
     };
 
     runAnimation();
   }, [controls, onFinish]);
 
   return (
-    <div className="flex items-center justify-center h-screen w-full bg-accent/70 bg-cover bg-[url('/bg-secondary.png')]">
+    <div className="flex items-center justify-center h-screen w-full bg-cover bg-[url('/bg-primary.png')]">
       <motion.div
         className="flex items-center justify-center w-full h-full"
         animate={controls}
         initial={{ scale: 1 }}
       >
-        <FaFish className="text-white text-[12rem]" />
+        <motion.img
+          src="/logo.png"
+          alt="logo"
+          className="w-[12rem] h-[12rem]"
+        />
       </motion.div>
     </div>
   );
