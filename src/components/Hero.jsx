@@ -1,16 +1,16 @@
 import { IoIosCall } from "react-icons/io";
-import fish from "../assets/fish.png";
-import logo2 from "../assets/logos/brc.png";
-import logo4 from "../assets/logos/dolphin safe gg.png";
-import logo3 from "../assets/logos/fots.png";
-import logo1 from "../assets/logos/haccp.png";
-import footerLogo from "../assets/logos/UH.png";
+import fish from "/assets/fish.png";
+import logo2 from "/assets/logos/brc.png";
+import logo4 from "/assets/logos/dolphin safe gg.png";
+import logo3 from "/assets/logos/fots.png";
+import logo1 from "/assets/logos/haccp.png";
+import footerLogo from "/assets/logos/UH.png";
 import logo from "/logo.png";
 import { HiOutlineMail } from "react-icons/hi";
 
 export default function Hero() {
   return (
-    <div className="relative min-h-screen w-full flex flex-col">
+    <div className="relative min-h-screen w-full flex flex-col justify-center">
       {/* Background layer */}
       <div className="fixed inset-0 -z-20 w-full h-full min-h-screen bg-[url('/bg-primary.png')] bg-cover bg-center" />
 
@@ -20,92 +20,81 @@ export default function Hero() {
       <img
         src={fish}
         alt="fish"
-        className="absolute md:fixed inset-0 md:left-28 md:w-full h-screen md:object-contain -z-10 pointer-events-none object-cover
-      sm:object-contain"
+        className="absolute md:fixed top-0 left-0 w-full h-screen 
+             object-contain object-top 
+             md:left-28 -z-10 pointer-events-none"
       />
 
       {/* Header */}
-      <header className="text-white p-4 text-center text-xl font-bold">
+      <header className="fixed top-0 text-white p-4 text-center text-xl font-bold">
         <img src={logo} alt="fish" className="object-contain w-15 md:w-20" />
       </header>
 
       {/* Body */}
-      <main className="flex-1 px-4 grid lg:grid-cols-3 gap-4 relative z-10 items-center">
+      <main className="flex flex-col lg:flex-row items-center justify-between w-full max-w-[1400px] mx-auto px-4 gap-10 relative z-10">
         {/* Left Section */}
-        <div className="text-white relative z-20 lg:col-span-2">
+        <div className="text-white lg:w-2/3">
           <div className="border-l-4 border-secondary pl-4">
-            <h1 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight font-primary uppercase">
+            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl font-bold leading-tight font-primary uppercase">
               Our Next <span className="text-secondary">Expedition</span>
             </h1>
-            <h1 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold md:whitespace-nowrap font-primary uppercase">
+            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl font-bold md:whitespace-nowrap font-primary uppercase">
               Brings a{" "}
               <span className="text-bright-ocean-blue">New Website</span> Ashore
             </h1>
-            <p className="text-xs md:text-lg font-medium mt-8 font-body md:whitespace-nowrap">
+            <p className="text-xs md:text-base lg:text-lg font-medium mt-8 font-body md:whitespace-nowrap">
               We're building a new online home for CeyFish Company.
             </p>
-            <p className="text-xs md:text-lg font-medium mb-2 font-body md:whitespace-nowrap">
+            <p className="text-xs md:text-base lg:text-lg font-medium mb-2 font-body md:whitespace-nowrap">
               While we build, our lines stay in the water and deliveries on
               course.
             </p>
           </div>
 
           {/* Contact Section */}
-          <div className="mt-10 text-center md:text-start md:ml-14 font-body uppercase font-semibold">
-            <p className="text-bright-ocean-blue text-xs md:text-2xl">
+          <div className="mt-10 text-center lg:text-start md:ml-14 font-body uppercase font-semibold">
+            <p className="text-bright-ocean-blue text-xs md:text-xl lg:text-2xl">
               Questions or orders ?
             </p>
-            <p className="text-xs md:text-2xl">Get in touch with us today !</p>
+            <p className="text-xs md:text-xl lg:text-2xl">
+              Get in touch with us today !
+            </p>
           </div>
 
-          <div className="flex justify-center md:justify-start md:ml-14 sm:space-x-8 mt-10 sm:mt-16 lg:mt-24 ml-0 sm:ml-5 font-body gap-6 sm:gap-0">
+          {/* Contact Buttons */}
+          <div className="flex justify-center lg:justify-start md:ml-14 sm:space-x-8 mt-6 lg:mt-24 ml-0 sm:ml-5 font-body gap-6 sm:gap-0">
             <a
               href="tel:+94722904343"
-              className="btn-hero w-28 md:w-52 justify-center bg-secondary hover:border-btn-dark text-[10px] md:text-sm"
+              className="btn-hero w-28 md:w-36 lg:w-52 justify-center bg-secondary hover:border-btn-dark text-[10px]"
             >
               <IoIosCall className="text-base md:text-2xl mb-1 text-deep-navy" />
-              <p className="btn-hero-text text-deep-navy">Call Us</p>
+              <p className="btn-hero-text text-deep-navy md:text-sm">Call Us</p>
             </a>
             <a
-              href="mailto:info@ceyfish.com?subject=Inquiry&body=Hello%20CeyFish%20Team,"
-              className="btn-hero w-28 md:w-52 justify-center bg-secondary hover:border-btn-dark text-[10px] md:text-sm"
+              href="mailto:contact@ceyfish.com?subject=Inquiry&body=Hello%20CeyFish%20Team,"
+              className="btn-hero w-28 md:w-36 lg:w-52 justify-center bg-secondary hover:border-btn-dark text-[10px]"
             >
               <span>
                 <HiOutlineMail className="text-base md:text-2xl mb-1 text-deep-navy" />
               </span>
-              <p className="btn-hero-text text-deep-navy whitespace-nowrap">
+              <p className="btn-hero-text text-deep-navy md:text-sm whitespace-nowrap">
                 Send Email
               </p>
             </a>
           </div>
         </div>
 
-        {/* Middle Section */}
-        {/* <div /> */}
-
         {/* Right Section */}
-        <div className="text-white flex flex-col lg:col-span-1">
-          <div className="flex flex-wrap items-center justify-center gap-3">
-            <img
-              src={logo1}
-              alt="logo1"
-              className="h-8 sm:h-14 md:h-16 object-contain"
-            />
-            <img
-              src={logo2}
-              alt="logo2"
-              className="h-8 sm:h-14 md:h-16 object-contain"
-            />
-            <img
-              src={logo3}
-              alt="logo3"
-              className="h-8 sm:h-14 md:h-16 object-contain"
-            />
-            <img
-              src={logo4}
-              alt="logo4"
-              className="h-8 sm:h-14 md:h-16 object-contain"
-            />
+        <div className="text-white flex flex-col items-center lg:w-1/3">
+          <div className="flex flex-wrap items-center justify-center gap-5">
+            {[logo1, logo2, logo3, logo4].map((src, i) => (
+              <img
+                key={i}
+                src={src}
+                alt={`logo${i + 1}`}
+                className="h-8 sm:h-12 md:h-14 lg:h-16 object-contain"
+              />
+            ))}
           </div>
 
           <div className="border-t border-secondary w-full md:w-11/12 my-6"></div>
@@ -123,7 +112,7 @@ export default function Hero() {
       </main>
 
       {/* Footer */}
-      <footer className="flex flex-col sm:flex-row justify-between items-center text-white p-4 text-center z-10">
+      <footer className="flex flex-col fixed bottom-0 w-full sm:flex-row justify-between items-center text-white p-4 text-center z-10">
         <img
           src={footerLogo}
           alt="Footer Logo"

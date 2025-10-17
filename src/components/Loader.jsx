@@ -1,4 +1,3 @@
-// import bg_secondary from "../assets/bg-secondary.png";
 import { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { FaFish } from "react-icons/fa";
