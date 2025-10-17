@@ -31,7 +31,7 @@ export default function Hero() {
       </header>
 
       {/* Body */}
-      <main className="flex flex-col lg:flex-row items-center justify-between w-full mx-auto px-4 gap-10 relative z-10">
+      <main className="flex flex-col lg:flex-row items-center justify-between w-full mx-auto px-4 gap-10 mt-24 flex-grow z-10">
         {/* Left Section */}
         <div className="text-white lg:w-2/3">
           <div className="border-l-4 border-secondary pl-4">
@@ -114,7 +114,7 @@ export default function Hero() {
       </main>
 
       {/* Footer */}
-      <footer className="flex flex-col fixed bottom-0 w-full sm:flex-row justify-between items-center text-white p-4 text-center z-10">
+      <footer className="flex flex-col w-full sm:flex-row justify-between items-center text-white p-4 text-center z-10">
         <img
           src={footerLogo}
           alt="Footer Logo"
