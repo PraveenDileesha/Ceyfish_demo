@@ -65,7 +65,7 @@ export default function Hero() {
           <div className="flex justify-center lg:justify-start gap-2 sm:gap-4 mt-6 lg:mt-24 md:ml-14 font-body">
             <a href="tel:+14378789393"
               aria-label="Call us at +1 437 878 9393"
-              className="btn-hero w-22 md:w-33 flex-row items-center justify-start bg-secondary hover:border-btn-dark">
+              className="btn-hero w-20 md:w-33 flex-row items-center justify-start bg-secondary hover:border-btn-dark">
               <IoIosCall className="btn-hero-icon w-5 h-5 md:w-6 md:h-6 shrink-0 text-deep-navy" />
               <p className="btn-hero-text text-deep-navy text-[10px] md:text-xs lg:text-sm ml-2 whitespace-nowrap">
                 Call
@@ -74,7 +74,7 @@ export default function Hero() {
             <a
               href="mailto:contact@ceyfish.com"
               aria-label="Send email to contact@ceyfish.com"
-              className="btn-hero w-23 md:w-33 flex-row items-center justify-start bg-secondary hover:border-btn-dark">
+              className="btn-hero w-21 md:w-33 flex-row items-center justify-start bg-secondary hover:border-btn-dark">
               <HiOutlineMail className="btn-hero-icon w-5 h-5 md:w-6 md:h-6 shrink-0 text-deep-navy" />
               <p className="btn-hero-text text-deep-navy text-[10px] md:text-xs lg:text-sm ml-2 whitespace-nowrap">
                 Email
