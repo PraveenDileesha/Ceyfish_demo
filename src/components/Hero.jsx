@@ -68,7 +68,7 @@ export default function Hero() {
               className="btn-hero w-22 md:w-33 flex-row items-center justify-start bg-secondary hover:border-btn-dark">
               <IoIosCall className="btn-hero-icon w-5 h-5 md:w-6 md:h-6 shrink-0 text-deep-navy" />
               <p className="btn-hero-text text-deep-navy text-[10px] md:text-xs lg:text-sm ml-2 whitespace-nowrap">
-                Call Us
+                Call
               </p>
             </a>
             <a
@@ -77,7 +77,7 @@ export default function Hero() {
               className="btn-hero w-23 md:w-33 flex-row items-center justify-start bg-secondary hover:border-btn-dark">
               <HiOutlineMail className="btn-hero-icon w-5 h-5 md:w-6 md:h-6 shrink-0 text-deep-navy" />
               <p className="btn-hero-text text-deep-navy text-[10px] md:text-xs lg:text-sm ml-2 whitespace-nowrap">
-                Email Us
+                Email
               </p>
             </a>
           </div>
