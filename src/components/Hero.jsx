@@ -21,7 +21,7 @@ export default function Hero() {
         src={fish}
         alt="fish"
         className="absolute md:fixed top-0 left-0 w-full h-screen 
-             object cover object-[100%_50%] md:object-contain object-top 
+             object cover md:object-contain object-top 
              md:left-28 -z-10 pointer-events-none"
       />
 
