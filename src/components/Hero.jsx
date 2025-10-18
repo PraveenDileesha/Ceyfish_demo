@@ -1,5 +1,5 @@
 import { IoIosCall } from "react-icons/io";
-import fish from "/assets/fishCropped.png";
+import fish from "/assets/fish.png";
 import logo2 from "/assets/logos/brc.png";
 import logo4 from "/assets/logos/dolphin safe gg.png";
 import logo3 from "/assets/logos/fots.png";
@@ -10,9 +10,25 @@ import { HiOutlineMail } from "react-icons/hi";
 
 export default function Hero() {
   return (
-    <div className="relative min-h-screen w-full flex flex-col justify-center">
+    <div className="relative min-h-screen w-full flex flex-col justify-center"
+    style={{
+        minHeight: "100vh", 
+        paddingTop: "env(safe-area-inset-top)", 
+        paddingBottom: "env(safe-area-inset-bottom)", 
+        paddingLeft: "env(safe-area-inset-left)", 
+        paddingRight: "env(safe-area-inset-right)",
+      }}
+    >
       {/* Background layer */}
-      <div className="fixed inset-0 -z-20 w-full h-full min-h-screen bg-[url('/bg-primary.png')] bg-cover bg-center" />
+      <div className="fixed inset-0 -z-20 w-full h-full min-h-screen bg-[url('/bg-primary.png')] bg-cover bg-center"
+      style={{
+        minHeight: "100vh", 
+        paddingTop: "env(safe-area-inset-top)", 
+        paddingBottom: "env(safe-area-inset-bottom)", 
+        paddingLeft: "env(safe-area-inset-left)", 
+        paddingRight: "env(safe-area-inset-right)",
+      }}
+      />
 
       <div className="fixed inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent md:from-black/85 md:via-black/40 lg:from-black/50 lg:via-black/20" />
 
@@ -23,6 +39,10 @@ export default function Hero() {
         className="absolute md:fixed top-0 left-0 w-full h-screen 
              object cover object-[100%_50%] md:object-contain object-top 
              md:left-28 -z-10 pointer-events-none"
+             style={{
+              top: "env(safe-area-inset-top)", // Changed: Fish layer safe-area top
+              left: "env(safe-area-inset-left)", // Changed: Fish layer safe-area left
+        }}
       />
 
       {/* Header */}
