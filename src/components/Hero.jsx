@@ -10,7 +10,7 @@ import { HiOutlineMail } from "react-icons/hi";
 
 export default function Hero() {
   return (
-    <div className="relative min-h-screen w-full flex flex-col justify-between lg:justify-center">
+    <div className="relative min-h-screen w-full flex flex-col justify-between lg:justify-center overflow-hidden">
       {/* Background layer */}
       <div className="fixed top-0 -z-20 w-full h-full min-h-screen overflow-hidden">
         <div className="absolute inset-0 bg-[url('/bg-primary.png')] bg-cover bg-center" />
