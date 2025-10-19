@@ -18,7 +18,7 @@ export default function Hero() {
           src={fish}
           alt="fish"
           className="absolute inset-0 w-full h-full object-contain md:object-contain
-                     scale-125 md:scale-150 translate-y 10 md:translate-y-40 
+                     scale-150 md:scale-150 translate-y 10 md:translate-y-40 
                      pointer-events-none"
         />
       </div>
