@@ -10,7 +10,7 @@ import { HiOutlineMail } from "react-icons/hi";
 
 export default function Hero() {
   return (
-    <div className="relative min-h-screen w-full flex flex-col justify-center">
+    <div className="relative min-h-screen w-full flex flex-col justify-between lg:justify-center">
       {/* Background layer */}
       <div className="fixed top-0 -z-20 w-full h-full min-h-screen overflow-hidden">
         <div className="absolute inset-0 bg-[url('/bg-primary.png')] bg-cover bg-center" />
@@ -32,7 +32,7 @@ export default function Hero() {
       </header>
 
       {/* Body */}
-      <main className="flex flex-col lg:flex-row items-center justify-start w-full px-3 gap-10 mt-10 mb-8 flex-grow z-10">
+      <main className="flex flex-col lg:flex-row items-center justify-start w-full px-3 gap-6 mt-4 mb-3 lg:mt-10 lg:mb-8 lg:flex-grow z-10">
         {/* Left Section */}
         <div className="text-white lg:w-2/3">
           <div className="border-l-4 border-secondary pl-4">
@@ -86,7 +86,7 @@ export default function Hero() {
 
         {/* Right Section */}
         <div className="text-white flex flex-col items-center lg:w-1/3">
-          <div className="flex flex-wrap items-center justify-center gap-5">
+          <div className="flex flex-wrap items-center justify-center gap-12">
             {[logo1, logo2, logo3, logo4].map((src, i) => (
               <img
                 key={i}
