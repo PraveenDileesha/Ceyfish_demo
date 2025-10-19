@@ -15,12 +15,11 @@ export default function Hero() {
       <div className="fixed top-0 -z-20 w-full h-full min-h-screen overflow-hidden">
         <div className="absolute inset-0 bg-[url('/bg-primary.png')] bg-cover bg-center" />
         <img
-          src={fish}
-          alt="fish"
-          className="absolute inset-0 w-full h-full object-contain md:object-contain
-                     scale-150 md:scale-150 md:translate-y-23 
-                     translate-x-3 md:translate-x-24
-                     pointer-events-none"
+        src={fish}
+        alt="fish"
+        className="absolute inset-0 w-full h-full object-contain
+        md:scale-150 md:translate-y-23 md:translate-x-24
+        pointer-events-none"
         />
       </div>
 
