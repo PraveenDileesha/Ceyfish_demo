@@ -12,18 +12,18 @@ export default function Hero() {
   return (
     <div className="relative min-h-screen w-full flex flex-col justify-center">
       {/* Background layer */}
-      <div className="fixed inset-0 -z-20 w-full h-full min-h-screen bg-[url('/bg-primary.png')] bg-cover bg-center"/>
+      <div className="fixed inset-0 -z-20 w-full h-full min-h-screen overflow-hidden">
+        <div className="absolute inset-0 bg-[url('/bg-primary.png')] bg-cover bg-center" />
+        <img
+          src={fish}
+          alt="fish"
+          className="absolute inset-0 w-full h-full object-contain md:object-contain
+                     scale-125 md:scale-150 translate-y 10 md:translate-y-40 
+                     pointer-events-none"
+        />
+      </div>
 
-      <div className="fixed inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent md:from-black/85 md:via-black/40 lg:from-black/50 lg:via-black/20" />
-
-      {/* Fish layer */}
-      <img
-        src={fish}
-        alt="fish"
-        className="absolute md:fixed top-0 left-0 w-full h-screen 
-             object-contain scale-150 translate-y-40
-             md:left-28 -z-10 pointer-events-none"
-      />
+    <div className="fixed inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent md:from-black/85 md:via-black/40 lg:from-black/50 lg:via-black/20" />
 
       {/* Header */}
       <header className="text-white p-4 text-center text-xl font-bold">
