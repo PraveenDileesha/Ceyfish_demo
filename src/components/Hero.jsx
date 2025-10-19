@@ -1,5 +1,5 @@
 import { IoIosCall } from "react-icons/io";
-import fish from "/assets/fish.png";
+import fish from "/assets/fishforweb.png";
 import logo2 from "/assets/logos/brc.png";
 import logo4 from "/assets/logos/dolphin safe gg.png";
 import logo3 from "/assets/logos/fots.png";
@@ -21,7 +21,7 @@ export default function Hero() {
         src={fish}
         alt="fish"
         className="absolute md:fixed top-0 left-0 w-full h-screen 
-             object-contain object-top 
+             object-contain scale-150 translate-y-40
              md:left-28 -z-10 pointer-events-none"
       />
 
