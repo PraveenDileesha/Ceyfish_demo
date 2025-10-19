@@ -1,5 +1,5 @@
 import { IoIosCall } from "react-icons/io";
-import fish from "/assets/fishforweb.png";
+import fish from "/assets/fishLine.png";
 import logo2 from "/assets/logos/brc.png";
 import logo4 from "/assets/logos/dolphin safe gg.png";
 import logo3 from "/assets/logos/fots.png";
@@ -12,13 +12,13 @@ export default function Hero() {
   return (
     <div className="relative min-h-screen w-full flex flex-col justify-center">
       {/* Background layer */}
-      <div className="fixed inset-0 -z-20 w-full h-full min-h-screen overflow-hidden">
+      <div className="fixed top-0 -z-20 w-full h-full min-h-screen overflow-hidden">
         <div className="absolute inset-0 bg-[url('/bg-primary.png')] bg-cover bg-center" />
         <img
           src={fish}
           alt="fish"
           className="absolute inset-0 w-full h-full object-contain md:object-contain
-                     scale-150 md:scale-150 translate-y-10 md:translate-y-40 
+                     scale-150 md:scale-150 translate-y-10 md:translate-y-23 
                      translate-x-3 md:translate-x-24
                      pointer-events-none"
         />
