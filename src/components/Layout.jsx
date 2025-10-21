@@ -23,14 +23,16 @@ const Layout = () => {
         <img
           src={fish}
           alt="fish"
-          className="absolute top-0 left-0 w-full h-full object-contain object-top
-                             scale-130 sm:scale-140 md:scale-150 lg:scale-160 xl:scale-180
-                             landscape-mobile:scale-110 landscape-mobile:translate-y-8
-                             translate-y-20 sm:translate-y-25 md:translate-y-27 lg:translate-y-33 xl:translate-y-35
-                             translate-x-2 sm:translate-x-3 md:translate-x-8 lg:translate-x-16 xl:translate-x-12
-                             landscape-mobile:translate-x-0
-                             transition-all duration-300 ease-in-out
-                             pointer-events-none"
+          className="absolute top-0 left-0 w-full h-full object-contain 
+          object-top landscape-mobile:object-center
+          scale-130 sm:scale-140 md:scale-150 lg:scale-160 xl:scale-180
+          landscape-mobile:scale-100
+          translate-y-20 sm:translate-y-25 md:translate-y-27 lg:translate-y-33 xl:translate-y-35
+          landscape-mobile:translate-y-0
+          translate-x-2 sm:translate-x-3 md:translate-x-8 lg:translate-x-16 xl:translate-x-12
+          landscape-mobile:translate-x-0
+          transition-all duration-300 ease-in-out
+          pointer-events-none"
         />
 
         {/* Black Tint Overlay - Above fish, below content */}
