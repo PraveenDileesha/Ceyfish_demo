@@ -88,7 +88,7 @@ body {
 /* Add this new rule for the root div */
 #root {
   width: 100%;
-  min-height: 100vh;
+  height: 100%;
   background-color: #071739; 
   background-image: url('/bg-primary.png');
   background-size: cover;
