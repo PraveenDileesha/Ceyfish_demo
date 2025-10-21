@@ -10,56 +10,36 @@ import { HiOutlineMail } from "react-icons/hi";
 
 const Layout = () => {
   return (
-    <div className="relative min-h-screen w-full flex flex-col">
-      {/* Background Layer */}
-      <div className="fixed inset-0 -z-20 w-full h-full bg-[url('/bg-primary.png')] bg-cover bg-center">
+    <div className="relative min-h-screen w-full overflow-hidden">
+      {/* Fixed Background Container */}
+      <div className="fixed inset-0 -z-20 w-full h-full">
+        {/* Background Image */}
+        <div className="absolute inset-0 bg-[url('/bg-primary.png')] bg-cover bg-center" />
+        
+        {/* Fish Image - Fixed Position */}
         <img
           src={fish}
           alt="fish"
-          className="fixed top-0 w-full h-full object-contain
+          className="absolute top-0 w-full h-full object-contain
                              scale-150 -translate-y-10 md:translate-y-46 lg:translate-y-23 [@media(min-width:2400px)]:translate-y-[200px]
                               [@media(min-width:344px)_and_(max-width:400px)_and_(min-height:882px)]:-translate-y-20  
                              translate-x-3 lg:translate-x-24
                              pointer-events-none landscape:translate-y-20"
         />
 
-        {/* <img
-          src={fish}
-          alt="fish"
-          className="absolute top-0 left-1/2 -translate-x-1/2
-               w-[100vw] sm:w-[70vw] md:w-[80vw] lg:w-[90vw] xl:w-[vw]
-               h-auto object-contain pointer-events-none"
-        /> */}
-
-        {/* <div className="absolute inset-0 bg-[url('/bg-primary.png')] bg-cover bg-center" /> */}
-
-        {/* <img
-          src={fish}
-          alt="fish"
-          className="absolute inset-0 w-full h-full object-contain object-top lg:translate-x-28 translate-y-4 sm:translate-y-6 md:translate-y-10 pointer-events-none transition-all duration-700 ease-in-out"
-        /> */}
-
-        {/* <img
-          src="/assets/fishLine.png"
-          alt="fish line"
-          className="
-    absolute top-0 left-1/2 transform -translate-x-[38%] -translate-y-[6%]
-    w-[100%] sm:w-[120%] md:w-[70%] lg:w-[50%]
-    pointer-events-none
-  "
-        /> */}
-
         {/* Background Gradient Overlay */}
-        <div className="fixed bottom-0 left-0 w-full h-full md:h-full lg:h-[80%] bg-gradient-to-t from-black/85 via-black/60 to-transparent md:from-black/70 md:via-black/50 lg:from-black/70 lg:via-black/70 xl:from-black/60 xl:via-black/40" />
+        <div className="absolute bottom-0 left-0 w-full h-full md:h-full lg:h-[80%] bg-gradient-to-t from-black/85 via-black/60 to-transparent md:from-black/70 md:via-black/50 lg:from-black/70 lg:via-black/70 xl:from-black/60 xl:via-black/40" />
       </div>
 
-      {/* HEADER */}
-      <header className="relative z-10 w-full flex p-4">
-        <img src={logo} alt="Logo" className="object-contain w-15 md:w-20" />
-      </header>
+      {/* Content Container */}
+      <div className="relative z-10 min-h-screen flex flex-col">
+        {/* HEADER */}
+        <header className="w-full flex p-4">
+          <img src={logo} alt="Logo" className="object-contain w-15 md:w-20" />
+        </header>
 
-      {/* MAIN CONTENT */}
-      <main className="relative z-10 flex-grow flex flex-col justify-center px-3 py-8">
+        {/* MAIN CONTENT */}
+        <main className="flex-grow flex flex-col justify-center px-3 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-8 md:gap-12 text-white w-full space-y-10 md:space-y-14">
           {/* LEFT Section */}
           <div className="flex flex-col space-y-10 sm:space-y-14 lg:space-y-0">
@@ -142,19 +122,20 @@ const Layout = () => {
             </div>
           </div>
         </div>
-      </main>
+        </main>
 
-      {/* FOOTER */}
-      <footer className="relative z-10 w-full flex flex-col sm:flex-row items-center justify-between p-4 text-white">
-        <img
-          src={footerLogo}
-          alt="Footer Logo"
-          className="object-contain w-28 md:w-36 mb-2 sm:mb-0"
-        />
-        <p className="text-[8px] md:text-xs mt-2 sm:mt-0 sm:text-right text-center">
-          © Ceyfish Co. is a trademark of Union Harvest Inc, Canada.
-        </p>
-      </footer>
+        {/* FOOTER */}
+        <footer className="w-full flex flex-col sm:flex-row items-center justify-between p-4 text-white">
+          <img
+            src={footerLogo}
+            alt="Footer Logo"
+            className="object-contain w-28 md:w-36 mb-2 sm:mb-0"
+          />
+          <p className="text-[8px] md:text-xs mt-2 sm:mt-0 sm:text-right text-center">
+            © Ceyfish Co. is a trademark of Union Harvest Inc, Canada.
+          </p>
+        </footer>
+      </div>
     </div>
   );
 };
