@@ -132,3 +132,47 @@ body {
     transform: rotate(1.25deg);
   }
 }
+
+/* Responsive Logo Sizing */
+.responsive-logos {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Custom breakpoints for logo sizing from 1926px down to 1535px */
+@media (max-width: 1926px) and (min-width: 1850px) {
+  .responsive-logos {
+    height: 80px !important;
+  }
+}
+
+@media (max-width: 1849px) and (min-width: 1820px) {
+  .responsive-logos {
+    height: 70px !important;
+  }
+}
+
+@media (max-width: 1819px) and (min-width: 1800px) {
+  .responsive-logos {
+    height: 65px !important;
+  }
+}
+
+@media (max-width: 1799px) and (min-width: 1700px) {
+  .responsive-logos {
+    height: 72px !important;
+  }
+}
+
+@media (max-width: 1699px) and (min-width: 1600px) {
+  .responsive-logos {
+    height: 64px !important;
+  }
+}
+
+@media (max-width: 1599px) and (min-width: 1535px) {
+  .responsive-logos {
+    height: 56px !important;
+  }
+}
+
+/* For screens smaller than 1535px, Tailwind classes handle the sizing */
