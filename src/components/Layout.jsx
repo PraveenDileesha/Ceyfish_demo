@@ -10,7 +10,7 @@ import { HiOutlineMail } from "react-icons/hi";
 
 const Layout = () => {
   return (
-    <div className="relative h-screen w-full overflow-hidden">
+    <div className="relative h-screen w-full min-w-[320px] overflow-hidden">
       {/* Fixed Background Layer - Only background image */}
       <div className="fixed top-0 left-0 -z-20 w-full h-screen bg-[url('/bg-primary.png')] bg-cover bg-center">
         {/* Background Gradient Overlay */}
@@ -18,20 +18,21 @@ const Layout = () => {
       </div>
 
       {/* Main Container - Fish image moves with content */}
-      <div className="relative z-10 h-full w-full flex flex-col overflow-hidden">
-        {/* Fish Image - Moves with content */}
+      <div className="relative z-10 h-full w-full min-w-[320px] flex flex-col overflow-hidden">
+        {/* Fish Image - Stuck to top, consistent across all screen sizes */}
         <img
           src={fish}
           alt="fish"
-          className="absolute top-0 left-0 w-full h-full object-contain
-                             scale-150 -translate-y-10 md:translate-y-46 lg:translate-y-23 [@media(min-width:2400px)]:translate-y-[200px]
-                              [@media(min-width:344px)_and_(max-width:400px)_and_(min-height:882px)]:-translate-y-20  
-                             translate-x-3 lg:translate-x-24
-                             pointer-events-none landscape:translate-y-20"
+          className="absolute top-0 left-0 w-full h-full object-contain object-top
+                             scale-130 sm:scale-140 md:scale-150 lg:scale-160 xl:scale-180
+                             translate-y-20 sm:translate-y-25 md:translate-y-27 lg:translate-y-33 xl:translate-y-35
+                             translate-x-2 sm:translate-x-3 md:translate-x-8 lg:translate-x-16 xl:translate-x-12
+                             transition-all duration-300 ease-in-out
+                             pointer-events-none"
         />
 
         {/* Black Tint Overlay - Above fish, below content */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent md:from-black/85 md:via-black/40 lg:from-black/50 lg:via-black/20" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent md:from-black/85 md:via-black/40 lg:from-black/80 lg:via-black/35 xl:from-black/65 xl:via-black/35" />
 
         {/* HEADER */}
         <header className="relative z-10 w-full flex p-4">
@@ -39,7 +40,7 @@ const Layout = () => {
         </header>
 
         {/* MAIN CONTENT */}
-        <main className="relative z-10 flex-grow flex flex-col justify-center px-3 py-2 md:py-4 overflow-hidden">
+        <main className="relative z-10 flex-grow flex flex-col justify-center px-3 py-2 md:py-4 overflow-hidden min-w-[320px]">
         <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-2 md:gap-4 lg:gap-8 text-white w-full space-y-4 md:space-y-6 lg:space-y-8">
           {/* LEFT Section */}
           <div className="flex flex-col space-y-3 sm:space-y-4 md:space-y-6 lg:space-y-0">
