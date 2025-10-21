@@ -13,9 +13,6 @@ const Layout = () => {
     <div className="relative h-screen w-full overflow-hidden">
       {/* Fixed Background Layer - Only background image */}
       <div className="fixed top-0 left-0 -z-20 w-full h-screen bg-[url('/bg-primary.png')] bg-cover bg-center">
-        {/* Black Tint Overlay */}
-        <div className="fixed inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent md:from-black/85 md:via-black/40 lg:from-black/50 lg:via-black/20" />
-        
         {/* Background Gradient Overlay */}
         <div className="absolute bottom-0 left-0 w-full h-full md:h-full lg:h-[80%] bg-gradient-to-t from-black/85 via-black/60 to-transparent md:from-black/70 md:via-black/50 lg:from-black/70 lg:via-black/70 xl:from-black/60 xl:via-black/40" />
       </div>
@@ -32,6 +29,9 @@ const Layout = () => {
                              translate-x-3 lg:translate-x-24
                              pointer-events-none landscape:translate-y-20"
         />
+
+        {/* Black Tint Overlay - Above fish, below content */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent md:from-black/85 md:via-black/40 lg:from-black/50 lg:via-black/20" />
 
         {/* HEADER */}
         <header className="relative z-10 w-full flex p-4">
