@@ -69,9 +69,19 @@ html {
   scroll-behavior: initial;
 }
 
-body {
+/* body {
   -webkit-font-smoothing: antialiased;
   background-color: #071739; 
+} */
+
+body {
+  -webkit-font-smoothing: antialiased;
+  background-color: #071739; /* Fallback color if image fails to load */
+  background-image: url('/bg-primary.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Keeps background fixed while content scrolls */
 }
 
 html,
