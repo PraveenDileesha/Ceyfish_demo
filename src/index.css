@@ -71,8 +71,8 @@ html {
 
 body {
   -webkit-font-smoothing: antialiased;
-  background-color: #021e36; 
-} 
+  background: linear-gradient(to bottom, #000000, #021e36);
+}
 
 html,
 body {
