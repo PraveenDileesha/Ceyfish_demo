@@ -71,8 +71,8 @@ html {
 
 body {
   -webkit-font-smoothing: antialiased;
-  background: inherit;
-}
+  background-color: #000f1d; 
+} 
 
 html,
 body {
