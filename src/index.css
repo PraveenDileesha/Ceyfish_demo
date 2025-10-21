@@ -71,6 +71,10 @@ html {
 
 body {
   -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+  background-color: #071739; 
+  overflow: hidden; 
 }
 
 html,
@@ -79,6 +83,17 @@ body {
   min-height: 100%;
   -webkit-font-smoothing: antialiased;
   position: relative;
+}
+
+/* Add this new rule for the root div */
+#root {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #071739; 
+  background-image: url('/bg-primary.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* Selection */
