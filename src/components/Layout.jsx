@@ -24,10 +24,10 @@ const Layout = () => {
           src={fish}
           alt="fish"
           className="absolute top-0 left-0 w-full h-full object-contain 
-          object-top landscape-mobile:object-center
-          scale-130 sm:scale-140 md:scale-150 lg:scale-160 xl:scale-180
-          landscape-mobile:scale-100
-          translate-y-20 sm:translate-y-25 md:translate-y-27 lg:translate-y-33 xl:translate-y-35
+          object-top landscape-mobile:object-top
+          scale-130 sm:scale-140 md:scale-150 lg:scale-160 xl:scale-170
+          landscape-mobile:scale-110
+          translate-y-20 sm:translate-y-20 md:translate-y-23 lg:translate-y-25 xl:translate-y-27
           landscape-mobile:translate-y-0
           translate-x-2 sm:translate-x-3 md:translate-x-8 lg:translate-x-16 xl:translate-x-12
           landscape-mobile:translate-x-0
