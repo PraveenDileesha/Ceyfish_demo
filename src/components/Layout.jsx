@@ -48,8 +48,8 @@ const Layout = () => {
         </header>
 
         {/* MAIN CONTENT */}
-        <main className="relative z-10 flex-grow flex flex-col justify-center px-3 py-6 md:py-8 lg:py-12 landscape-mobile:py-2 min-w-[320px]">
-          <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] landscape-mobile:grid-cols-[1.5fr_1fr] gap-6 md:gap-8 lg:gap-8 landscape-mobile:gap-3 text-white w-full transition-all duration-300 ease-in-out my-auto">
+        <main className="relative z-10 flex-grow flex flex-col justify-center px-3 py-6 mt-6 md:mt-0 md:py-8 lg:py-12 landscape-mobile:py-2 min-w-[320px]">
+          <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] landscape-mobile:grid-cols-[1.5fr_1fr] gap-6 md:gap-8 lg:gap-8 landscape-mobile:gap-3 text-white w-full transition-all duration-300 ease-in-out lg:my-auto my-1">
             {/* LEFT Section */}
             <div className="flex flex-col space-y-3 sm:space-y-4 md:space-y-6 lg:space-y-0 landscape-mobile:space-y-2 transition-all duration-300 ease-in-out">
               <div className="border-l-4 border-secondary pl-4 landscape-mobile:pl-2">

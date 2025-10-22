@@ -282,14 +282,14 @@ main {
 }
 
 /* Only center when there's plenty of height */
-@media (min-height: 940px) {
+@media (min-height: 900px) {
   main {
     justify-content: center;
   }
 }
 
 /* Reset to flex-start for shorter heights at desktop sizes */
-@media (min-width: 1024px) and (max-height: 850px) {
+@media (min-width: 391px) and (max-height: 843px) {
   main {
     justify-content: flex-start !important;
   }
