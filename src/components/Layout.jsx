@@ -10,7 +10,7 @@ import { HiOutlineMail } from "react-icons/hi";
 
 const Layout = () => {
   return (
-    <div className="relative h-screen w-full min-w-[320px] overflow-hidden">
+    <div className="relative min-h-screen w-full min-w-[320px] overflow-hidden">
       {/* Fixed Background Layer - Only background image */}
       <div className="fixed top-0 left-0 -z-20 w-full h-screen bg-[url('/bg-primary.png')] bg-cover bg-center">
         {/* Background Gradient Overlay */}
@@ -18,7 +18,7 @@ const Layout = () => {
       </div>
 
       {/* Main Container - Fish image moves with content */}
-      <div className="relative z-10 h-full w-full min-w-[320px] flex flex-col overflow-hidden">
+      <div className="relative z-10 min-h-screen w-full min-w-[320px] flex flex-col overflow-hidden">
         {/* Fish Image - Responsive to orientation */}
         <img
           src={fish}
