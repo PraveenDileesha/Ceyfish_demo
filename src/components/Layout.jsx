@@ -12,7 +12,7 @@ const Layout = () => {
   return (
     <div className="relative min-h-screen w-full min-w-[320px] overflow-hidden">
       {/* Fixed Background Layer - Only background image */}
-      <div className="fixed top-0 left-0 -z-20 w-full h-screen bg-[url('/bg-primary.png')] bg-cover bg-center">
+      <div className="fixed top-0 left-0 -z-20 w-full min-h-screen bg-[url('/bg-primary.png')] bg-cover bg-center">
         {/* Background Gradient Overlay */}
         <div className="absolute bottom-0 left-0 w-full h-full md:h-full lg:h-[80%] bg-gradient-to-t from-black/85 via-black/60 to-transparent md:from-black/70 md:via-black/50 lg:from-black/70 lg:via-black/70 xl:from-black/60 xl:via-black/40 transition-all duration-300 ease-in-out" />
       </div>
