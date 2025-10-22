@@ -72,6 +72,8 @@ html {
 body {
   -webkit-font-smoothing: antialiased;
   background-color: #0A1A2f; 
+  overflow-y: auto;
+  overflow-x: hidden;
 } 
 
 html,
