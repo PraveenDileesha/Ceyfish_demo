@@ -282,7 +282,7 @@ main {
 }
 
 /* Only center when there's plenty of height */
-@media (min-height: 900px) {
+@media (min-height: 940px) {
   main {
     justify-content: center;
   }
