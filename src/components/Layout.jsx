@@ -39,7 +39,7 @@ const Layout = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent md:from-black/85 md:via-black/40 lg:from-black/80 lg:via-black/35 xl:from-black/65 xl:via-black/35 transition-all duration-300 ease-in-out" />
 
         {/* HEADER */}
-        <header className="relative z-10 w-full flex p-4 landscape-mobile:p-2">
+        <header className="relative z-10 w-full flex p-5 landscape-mobile:p-2">
           <img
             src={logo}
             alt="Logo"
@@ -49,7 +49,8 @@ const Layout = () => {
 
         {/* MAIN CONTENT */}
         <main className="relative z-10 flex-grow flex flex-col justify-center px-3 py-6 md:py-8 lg:py-12 landscape-mobile:py-2 min-w-[320px]">
-          <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] landscape-mobile:grid-cols-[1.5fr_1fr] gap-6 md:gap-8 lg:gap-8 landscape-mobile:gap-3 text-white w-full transition-all duration-300 ease-in-out my-auto">
+        <div className="flex flex-col justify-center flex-grow">
+          <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] landscape-mobile:grid-cols-[1.5fr_1fr] gap-9 md:gap-9 lg:gap-8 landscape-mobile:gap-3 text-white w-full transition-all duration-300 ease-in-out">
             {/* LEFT Section */}
             <div className="flex flex-col space-y-3 sm:space-y-4 md:space-y-6 lg:space-y-0 landscape-mobile:space-y-2 transition-all duration-300 ease-in-out">
               <div className="border-l-4 border-secondary pl-4 landscape-mobile:pl-2">
@@ -131,6 +132,7 @@ const Layout = () => {
               </div>
             </div>
           </div>
+        </div>
         </main>
 
         {/* FOOTER */}
