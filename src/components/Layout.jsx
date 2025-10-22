@@ -27,9 +27,9 @@ const Layout = () => {
           object-top landscape-mobile:object-top
           scale-130 sm:scale-140 md:scale-150 lg:scale-160 xl:scale-170
           landscape-mobile:scale-110
-          translate-y-20 sm:translate-y-20 md:translate-y-23 lg:translate-y-25 xl:translate-y-27
+          translate-y-26 sm:translate-y-20 md:translate-y-30 lg:translate-y-25 xl:translate-y-27
           landscape-mobile:translate-y-0
-          translate-x-2 sm:translate-x-3 md:translate-x-8 lg:translate-x-16 xl:translate-x-12
+          translate-x-2 sm:translate-x-3 md:translate-x-5 lg:translate-x-6 xl:translate-x-12
           landscape-mobile:translate-x-0
           transition-all duration-300 ease-in-out
           pointer-events-none"
