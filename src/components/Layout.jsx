@@ -72,7 +72,7 @@ const Layout = () => {
               </div>
 
               {/* Contact Section */}
-              <div className="mt-10 landscape-mobile:mt-3 text-center lg:text-start landscape-mobile:text-start md:ml-14 landscape-mobile:ml-2 font-body uppercase font-semibold transition-all duration-300 ease-in-out">
+              <div className="mt-10 landscape-mobile:mt-3 text-center lg:text-start landscape-mobile:text-start lg:ml-14 landscape-mobile:ml-2 font-body uppercase font-semibold transition-all duration-300 ease-in-out">
                 <p className="text-bright-ocean-blue text-xs md:text-base lg:text-2xl landscape-mobile:text-[11px] transition-all duration-300 ease-in-out">
                   Questions or orders ?
                 </p>
@@ -82,7 +82,7 @@ const Layout = () => {
               </div>
 
               {/* Contact Buttons */}
-              <div className="flex justify-center lg:justify-start landscape-mobile:justify-start gap-4 landscape-mobile:gap-4 mt-4 lg:mt-24 landscape-mobile:mt-2 md:ml-14 landscape-mobile:ml-2 font-body transition-all duration-300 ease-in-out">
+              <div className="flex justify-center lg:justify-start landscape-mobile:justify-start gap-4 landscape-mobile:gap-4 mt-4 lg:mt-24 landscape-mobile:mt-2 lg:ml-14 landscape-mobile:ml-2 font-body transition-all duration-300 ease-in-out">
                 <a
                   href="tel:+14378789393"
                   aria-label="Call us at +1 437 878 9393"
