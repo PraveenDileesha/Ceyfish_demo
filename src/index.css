@@ -68,20 +68,22 @@ html {
 html {
   scroll-behavior: initial;
   width: 100%;
-  min-height: 100vh;
+  min-height: 100dvh; 
   -webkit-font-smoothing: antialiased;
   position: relative;
-  overflow-x: hidden;
+  overflow-x: hidden; 
 }
 
 body {
   -webkit-font-smoothing: antialiased;
-  background-color: #0A1A2f; 
+  background-color: #0A1A2f;
   overflow-y: auto;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
   width: 100%;
+  min-height: 100%;
   position: relative;
+  padding-bottom: env(safe-area-inset-bottom);
 }
 
 /* Selection */
