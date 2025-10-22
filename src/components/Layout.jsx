@@ -108,8 +108,8 @@ const Layout = () => {
             </div>
 
             {/* RIGHT Section */}
-            <div className="flex flex-col items-center justify-center w-full gap-y-5 sm:gap-y-10 md:gap-y-0 landscape-mobile:gap-y-2 transition-all duration-300 ease-in-out">
-              <div className="flex flex-nowrap items-center justify-center gap-4 lg:gap-6 xl:gap-4 2xl:gap-8 landscape-mobile:gap-2 w-full transition-all duration-300 ease-in-out">
+            <div className="flex flex-col items-center justify-center w-full gap-y-1 sm:gap-y-1 md:gap-y-1 landscape-mobile:gap-y-2 transition-all duration-300 ease-in-out">
+              <div className="flex flex-nowrap items-center justify-center gap-4 lg:gap-4 xl:gap-6 2xl:gap-8 landscape-mobile:gap-2 w-full transition-all duration-300 ease-in-out">
                 {[logo1, logo2, logo3, logo4].map((src, i) => (
                   <img
                     key={i}
@@ -120,7 +120,9 @@ const Layout = () => {
                 ))}
               </div>
 
-              <div className="border-t border-secondary w-10/12 my-6 landscape-mobile:my-2" />
+              {/* <div className="h-0.5 bg-yellow-300 mt-3 mb-6 transition-all duration-300 ease-in-out w-[calc(100%+0.5rem)] sm:w-[calc(100%+1rem)] md:w-[calc(100%+1.5rem)] lg:w-[calc(100%+2rem)]" style={{ maxWidth: '90%' }}/> */}
+              <div className="h-0.5 bg-yellow-300 mt-3 mb-6 transition-all duration-300 ease-in-out" style={{ width: 'clamp(55%, 50vw, 90%)'}}/>
+              {/* <div className="border-t border-secondary w-10/12 my-6 landscape-mobile:my-2" /> */}
 
               <div className="text-[8px] md:text-[10px] lg:text-sm landscape-mobile:text-[7px] space-y-2 md:space-y-4 landscape-mobile:space-y-1 text-center font-body font-medium max-w-[90%] transition-all duration-300 ease-in-out">
                 <p>Licensed under the Safe Food for Canadians Regulations</p>
