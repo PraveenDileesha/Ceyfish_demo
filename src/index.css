@@ -291,7 +291,7 @@ main {
 
 /* ========================= LANDSCAPE MOBILE SUPPORT ========================= */
 /* Target mobile devices in landscape orientation (max-height: 500px in landscape) */
-@media (max-width: 926px) and (orientation: landscape) and (max-height: 500px) {
+@media (max-width: 932px) and (orientation: landscape) and (max-height: 540px) {
   .landscape-mobile\:scale-110 {
     transform: scale(1.1);
   }
