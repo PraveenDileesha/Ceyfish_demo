@@ -72,6 +72,7 @@ html {
   -webkit-font-smoothing: antialiased;
   position: relative;
   overflow-x: hidden; 
+  background-color: #0A1A2f;
 }
 
 body {
@@ -84,6 +85,10 @@ body {
   min-height: 100%;
   position: relative;
   padding-bottom: env(safe-area-inset-bottom);
+}
+
+html, body {
+  overscroll-behavior: none;
 }
 
 /* Selection */
