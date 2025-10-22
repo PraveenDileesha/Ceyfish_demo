@@ -67,6 +67,11 @@ html {
 
 html {
   scroll-behavior: initial;
+  width: 100%;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  overflow-x: hidden;
 }
 
 body {
@@ -74,13 +79,8 @@ body {
   background-color: #0A1A2f; 
   overflow-y: auto;
   overflow-x: hidden;
-} 
-
-html,
-body {
+  -webkit-overflow-scrolling: touch;
   width: 100%;
-  min-height: 100%;
-  -webkit-font-smoothing: antialiased;
   position: relative;
 }
 
@@ -172,6 +172,118 @@ body {
 @media (max-width: 1599px) and (min-width: 1535px) {
   .responsive-logos {
     height: 56px !important;
+  }
+}
+
+/* ========================= RESPONSIVE CONTENT FIXES ========================= */
+/* Mobile - small screens */
+@media (max-width: 767px) {
+  main {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+
+/* Very small mobile with short height */
+@media (max-width: 767px) and (max-height: 667px) {
+  main {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+  
+  main > div {
+    gap: 1rem;
+  }
+}
+
+/* Extra small screens (iPhone SE, etc) */
+@media (max-width: 375px) and (max-height: 667px) {
+  main {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+}
+
+/* Tablet range */
+@media (min-width: 768px) and (max-width: 1023px) {
+  main {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+  
+  main > div {
+    row-gap: 2rem;
+  }
+}
+
+/* Tablet with short height */
+@media (min-width: 768px) and (max-width: 1023px) and (max-height: 800px) {
+  main {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  
+  main > div {
+    row-gap: 1.5rem;
+  }
+}
+
+/* Desktop range */
+@media (min-width: 1024px) {
+  main {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+/* Desktop with short height */
+@media (min-width: 1024px) and (max-height: 768px) {
+  main {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+
+/* Very short desktop screens */
+@media (min-width: 1024px) and (max-height: 700px) {
+  main {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+}
+
+/* Large desktop with enough height - allow more padding */
+@media (min-width: 1024px) and (min-height: 900px) {
+  main {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+
+/* Extra large desktop with excellent height */
+@media (min-width: 1400px) and (min-height: 1000px) {
+  main {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+
+/* Control vertical centering to prevent over-scrolling */
+main {
+  justify-content: flex-start;
+}
+
+/* Only center when there's plenty of height */
+@media (min-height: 900px) {
+  main {
+    justify-content: center;
+  }
+}
+
+/* Reset to flex-start for shorter heights at desktop sizes */
+@media (min-width: 1024px) and (max-height: 850px) {
+  main {
+    justify-content: flex-start !important;
   }
 }
 
