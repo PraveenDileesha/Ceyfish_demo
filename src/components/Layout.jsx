@@ -48,8 +48,6 @@ const Layout = () => {
         </header>
 
         {/* MAIN CONTENT */}
-        {/* <main className="relative z-10 flex-grow flex flex-col justify-center px-3 py-2 md:py-4 landscape-mobile:py-1 overflow-hidden min-w-[320px]"> */}
-        {/* <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] landscape-mobile:grid-cols-[1.5fr_1fr] gap-2 md:gap-4 lg:gap-8 landscape-mobile:gap-3 text-white w-full space-y-4 md:space-y-6 lg:space-y-8 landscape-mobile:space-y-0 transition-all duration-300 ease-in-out"> */}
         <main className="relative z-10 flex-grow flex flex-col justify-center px-3 py-6 md:py-8 lg:py-12 landscape-mobile:py-2 min-w-[320px]">
           <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] landscape-mobile:grid-cols-[1.5fr_1fr] gap-6 md:gap-8 lg:gap-8 landscape-mobile:gap-3 text-white w-full transition-all duration-300 ease-in-out my-auto">
             {/* LEFT Section */}
@@ -120,9 +118,7 @@ const Layout = () => {
                 ))}
               </div>
 
-              {/* <div className="h-0.5 bg-yellow-300 mt-3 mb-6 transition-all duration-300 ease-in-out w-[calc(100%+0.5rem)] sm:w-[calc(100%+1rem)] md:w-[calc(100%+1.5rem)] lg:w-[calc(100%+2rem)]" style={{ maxWidth: '90%' }}/> */}
               <div className="h-0.5 bg-yellow-300 mt-3 mb-6 transition-all duration-300 ease-in-out" style={{ width: 'clamp(55%, 50vw, 90%)'}}/>
-              {/* <div className="border-t border-secondary w-10/12 my-6 landscape-mobile:my-2" /> */}
 
               <div className="text-[8px] md:text-[10px] lg:text-sm landscape-mobile:text-[7px] space-y-2 md:space-y-4 landscape-mobile:space-y-1 text-center font-body font-medium max-w-[90%] transition-all duration-300 ease-in-out">
                 <p>Licensed under the Safe Food for Canadians Regulations</p>
