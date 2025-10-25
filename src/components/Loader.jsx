@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
-import { FaFish } from "react-icons/fa";
 
 const Loader = ({ onFinish }) => {
   const controls = useAnimation();

@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Hero from "./components/Hero";
 import Loader from "./components/Loader";
 import Layout from "./components/Layout";
 
@@ -7,7 +6,7 @@ const App = () => {
   const [loading, setLoading] = useState(true);
 
   const handleLoaderFinish = () => {
-    setTimeout(() => setLoading(false), 300); // remove loader after fade
+    setTimeout(() => setLoading(false), 300); 
   };
 
   return (
@@ -23,7 +22,6 @@ const App = () => {
 
       {/* Page content (hidden behind loader initially) */}
       <div className={`transition-opacity duration-500 h-screen`}>
-        {/* <Hero /> */}
         <Layout />
       </div>
     </div>
