@@ -96,12 +96,15 @@ const Layout = () => {
                 <a
                   href="mailto:contact@ceyfish.com"
                   aria-label="Send email to contact@ceyfish.com"
-                  className="btn-hero w-21 md:w-30 landscape-mobile:w-16 flex-row items-center justify-center bg-secondary hover:border-btn-dark"
+                  className="relative group btn-hero w-21 md:w-30 landscape-mobile:w-16 flex-row items-center justify-center bg-secondary hover:border-btn-dark"
                 >
                   <HiOutlineMail className="btn-hero-icon w-5 h-5 md:w-6 md:h-6 landscape-mobile:w-4 landscape-mobile:h-4 shrink-0 text-deep-navy transition-all duration-300 ease-in-out" />
                   <p className="btn-hero-text text-deep-navy text-[10px] md:text-xs lg:text-sm landscape-mobile:text-[9px] ml-2 landscape-mobile:ml-1 whitespace-nowrap transition-all duration-300 ease-in-out">
                     Email
                   </p>
+                  <span className="absolute bottom-full left-[62%] -translate-x-1/2 mb-2 opacity-0 group-hover:opacity-100 bg-[#00b1f5] text-white text-xs px-2 py-1 rounded shadow transition-opacity duration-150 ease-out pointer-events-none whitespace-nowrap hidden md:block">
+                  contact@ceyfish.com
+                  </span>
                 </a>
               </div>
             </div>
