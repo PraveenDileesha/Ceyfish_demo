@@ -373,7 +373,7 @@ main {
   }
 
   .landscape-mobile\:gap-5 {
-    gap: 1.20rem;
+    gap: 1.0rem;
   }
   
   .landscape-mobile\:space-y-0 > :not([hidden]) ~ :not([hidden]) {

@@ -110,8 +110,8 @@ const Layout = () => {
             </div>
 
             {/* RIGHT Section */}
-            <div className="flex flex-col items-center justify-center w-full gap-y-1 sm:gap-y-1 md:gap-y-1 landscape-mobile:gap-y-2 transition-all duration-300 ease-in-out">
-              <div className="flex flex-nowrap items-center justify-center gap-4 lg:gap-4 xl:gap-6 2xl:gap-8 landscape-mobile:gap-5 w-full transition-all duration-300 ease-in-out">
+            <div className="flex flex-col items-center justify-center w-full gap-y-1 sm:gap-y-1 md:gap-y-1 landscape-mobile:gap-y-1 transition-all duration-300 ease-in-out">
+              <div className="flex flex-nowrap items-center justify-center gap-4 lg:gap-4 xl:gap-6 2xl:gap-8 landscape-mobile:gap-5 landscape-mobile:gap-3 w-full transition-all duration-300 ease-in-out">
                 {[logo1, logo2, logo3, logo4].map((src, i) => (
                   <img
                     key={i}
