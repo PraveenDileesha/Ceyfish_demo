@@ -459,3 +459,10 @@ main {
     width: clamp(55%, 50vw, 70%) !important;
   }
 }
+
+/* Target vertical screens ~1080x1920 */
+@media (min-width: 1000px) and (max-width: 1200px) and (min-height: 1800px) and (max-height: 2000px) and (orientation: portrait) {
+  .fish-image-benq {
+    transform: translateY(10rem) scale(0.9); /* Pull down 5rem */
+  }
+}

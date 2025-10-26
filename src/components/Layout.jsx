@@ -23,7 +23,7 @@ const Layout = () => {
         <img
           src={fish}
           alt="fish"
-          className="absolute top-0 left-0 w-full h-full object-contain 
+          className="fish-image-benq absolute top-0 left-0 w-full h-full object-contain 
           object-top landscape-mobile:object-top
           scale-130 sm:scale-140 md:scale-150 lg:scale-160 xl:scale-170
           landscape-mobile:scale-110
