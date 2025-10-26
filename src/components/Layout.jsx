@@ -27,9 +27,9 @@ const Layout = () => {
           object-top landscape-mobile:object-top
           scale-130 sm:scale-140 md:scale-150 lg:scale-160 xl:scale-170
           landscape-mobile:scale-110
-          translate-y-26 sm:translate-y-20 md:translate-y-30 lg:translate-y-25 xl:translate-y-27
+          translate-y-26 sm:translate-y-17 md:translate-y-20 lg:translate-y-25 xl:translate-y-27
           landscape-mobile:translate-y-0
-          translate-x-2 sm:translate-x-3 md:translate-x-5 lg:translate-x-6 xl:translate-x-12
+          translate-x-2 sm:translate-x-3 md:translate-x-4 lg:translate-x-6 xl:translate-x-12
           landscape-mobile:translate-x-0
           transition-all duration-300 ease-in-out
           pointer-events-none"
@@ -122,7 +122,7 @@ const Layout = () => {
                 ))}
               </div>
 
-              <div className="h-0.5 bg-yellow-300 mt-3 mb-6 transition-all duration-300 ease-in-out" style={{ width: 'clamp(55%, 50vw, 90%)'}}/>
+              <div className="h-0.5 bg-yellow-300 mt-3 mb-6 transition-all duration-300 ease-in-out line-width" style={{ width: 'clamp(60%, 50vw, 90%)'}}/>
 
               <div className="text-[8px] md:text-[10px] lg:text-sm landscape-mobile:text-[7px] space-y-2 md:space-y-4 landscape-mobile:space-y-1 text-center font-body font-medium max-w-[90%] transition-all duration-300 ease-in-out">
                 <p>Licensed under the Safe Food for Canadians Regulations</p>

@@ -373,7 +373,7 @@ main {
   }
 
   .landscape-mobile\:gap-5 {
-    gap: 1.50rem;
+    gap: 1.20rem;
   }
   
   .landscape-mobile\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
@@ -453,5 +453,9 @@ main {
   
   .landscape-mobile\:gap-y-2 {
     row-gap: 0.5rem;
+  }
+  
+  .line-width {
+    width: clamp(55%, 50vw, 70%) !important;
   }
 }
